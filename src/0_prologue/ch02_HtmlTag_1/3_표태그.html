@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>표태그1</title>
+    <style>
+		table   { background-color: black;}
+		tr      { background-color: white;}
+		td:hover{ background-color: orange;}
+		td      { padding: 10px; /*안쪽여백*/}
+        
+		
+    </style>
+</head>
+<body>
+    <table>
+        <!-- 1행 -->
+        <caption><표1-1>표제목</caption>
+        <caption><h1><budget>표제목</h1></caption>
+        <tr>
+            <td colspan="2">1행1,2열(</td>
+            <!--<td>1행2열</td>-->
+            <!--<td>1행3열</td>-->
+            <td rowspan="3">1,2,3행3열</td>
+        </tr>
+
+        <!-- 2행 -->
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <!--<td rowspan="3">2,3행3열</td>-->
+        </tr>
+
+        <!-- 3행 -->
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <!--<td>3행3열</td>-->
+        </tr>
+
+    </table>
+
+</body>
+</html>

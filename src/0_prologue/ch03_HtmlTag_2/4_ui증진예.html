@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <filedset>
+            <legend>필드에 입력형식 힌트 주는 UI</legend>
+            <ul>
+                <li>
+                    연락처 :
+                    <input type="tel" name="tel" required="required" placeholder="010-0000-0000"
+                           pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}"
+                           title="전화번호 형식을 입력해 주세요. ###-####-####" />
+                </li>
+                <li>
+                    이메일 :
+                    <input type="text" anme="email"
+                           placeholder="id@domain.com"
+                           title="이메일 형식을 체크해 주세요" />
+
+                </li>
+            </ul>
+
+            <center>
+                <input type="submit" value="입력완료" />
+                <input type="reset" value="입력취소" />
+            </center>
+        </filedset>
+        
+    </form>
+</body>
+</html>

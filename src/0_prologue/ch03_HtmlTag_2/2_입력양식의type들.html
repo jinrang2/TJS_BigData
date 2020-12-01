@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<form action="">
+
+		아이디
+		<input type="text" name="id" /><input type="button" value="아이디중복체크" /><br />
+
+		비밀번호
+		<input type="password" name="pw" /><br />
+
+		전화번호
+		<input type="tel1" name="tel1" size="2" />-
+		<input type="tel2" name="tel2" size="2" />-
+		<input type="tel3" name="tel3" size="2" /><br />
+
+		사진
+		<input type="file" name="file" /><br />
+
+		성별
+		<input type="radio" name="gender" value="m" checked="checked" />남자
+		<input type="radio" name="gender" value="f" />여자<br />
+
+		사용언어
+		<input type="checkbox" name="lang" value="ko" />한국어
+		<input type="checkbox" name="lang" value="ch" />중국어
+		<input type="checkbox" name="lang" value="en" />영어<br />
+
+		자기소개<br />
+		<textarea name="info" cols="20" rows="5"></textarea><br />
+
+		국적
+		<select name="nation">
+			<option value="kor">한국</option>
+			<option>중국</option>
+			<option>인도</option>
+		</select><br />
+
+		좋아하는 음식
+		<select name="foot" multiple="multiple" size="2">
+			<option>김치찌개</option>
+			<option>샐러드</option>
+			<option>파스타</option>
+			<option>삼겹살</option>
+		</select><br />
+
+		생년월일
+		<input type="date" name="birth" /> <br />
+
+
+
+		<input type="submit" value="입력" />
+		<input type="reset" value="입력취소" />
+
+
+	</form>
+</body>
+</html>

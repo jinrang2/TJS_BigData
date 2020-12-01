@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input{
+            color:green; 
+            border: 1px solid purple;
+        }
+
+        input[type=password]{color:red;}
+
+        input[type^='te']     {
+            width:300px;
+            color:orange;
+        }
+
+        input[name$=me]{
+            color:blue;
+        }
+
+        img[alt]{
+            width:50px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        이름 <input type="text" name="name" /><br />
+        아뒤 <input type="text" name="id" /><br />
+        비번 <input type="password" name="pw" /><br />
+        전화 <input type="tel" name="tel" /><br />
+
+        <img src="1119_book/book.jpg" alt="로고" />
+        <img src="1119_book/book.bmp" alt="로고" />
+        <img src="1119_book/book.gif" alt="로고" />
+        <img src="1119_book/book.png" alt="로고" /><br />
+
+        <input type="submit" />
+
+    </form>
+</body>
+</html>

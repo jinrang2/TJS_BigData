@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+     <style>
+        div{
+            background-color:#c6c739;
+            Border:#ff0000 solid 1px;
+        }
+
+        /* h1태그중에 id1이 id인 선택자 태그와#아이디가 붙어야함*/
+        h1#id1 {background-color:#00ff00}
+
+	 	/* h1의 후손중에 id1이 id인 선택자 태그와#아이디가 붙어야함*/
+        h1 #id1{}
+     </style>
+</head>
+<body>
+    <h1 id="id1">제목h1</h1>
+    <p> 본문 p</p>
+    <div>
+        <h1>div 밑에 h1태그 부분</h1>
+        <p>div 밑에 p태그</p>
+    </div>
+    <div>
+        여기도 div
+    </div>
+</body>
+</html>

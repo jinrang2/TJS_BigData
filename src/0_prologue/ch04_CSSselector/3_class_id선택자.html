@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		div {
+			border: 1px solid #cccccc;
+		}
+
+		#header {
+			width: 600px;
+			margin: 0 auto;
+			background-color: lightyellow;
+			text-align: center;
+		}
+
+		#wrap {
+			width: 600px;
+			margin: 0 auto;
+			background-color: aqua;
+			overflow: hidden;
+		}
+
+		#wrap #content ul .menu_odd {
+			font-size: 1.5em;
+		}	/* id 앞에는 #, 클래스 앞에는 .을 붙여 선택자를 지정한다*/
+
+		#wrap #content ul .menu_even {
+			font-weight:bold;
+		}
+		/* id 앞에는 #, 클래스 앞에는 .을 붙여 선택자를 지정한다*/
+
+		#wrap #content {
+			width: 347px;
+			float: left;
+			text-align: center;
+			height: 250px;
+		}
+
+		#wrap #side_banner {
+			width: 248px;
+			float: left;
+			text-align: center;
+			height: 250px;
+		}
+
+		#wrap #side_banner img {
+			width: 200px;			
+		}
+
+		#footer {
+			clear: both;
+			width: 600px;
+			margin: 0 auto;
+			background-color: lightyellow;
+			text-align: center;
+		}
+	</style>
+</head>
+	
+<body>
+	<div id="header">
+		<h1>HEADER</h1>
+	</div>
+
+	<div id="wrap">
+		<div id="content">
+			<h2>CONTENT</h2>
+			<ul>
+				<li class="menu_odd">	menu1</li>
+				<li class="menu_even">	menu2</li>
+				<li class="menu_odd">	menu3</li>
+				<li class="menu_even">	menu4</li>
+				<li class="menu_odd">	menu5</li>
+			</ul>
+		</div>
+
+		<div id="side_banner">
+			<h2>SIDE BANNER</h2>
+			<img src="daum_logo.png" alt="다음로고" />
+		</div>
+
+
+	</div>
+
+	<div id="footer">
+		<h1>FOOTER</h1>
+	</div>
+
+</body>
+</html>
