@@ -6,6 +6,10 @@ public class Ex04 {
 		// TODO Auto-generated method stub
 		int i=1, j=10, h=10;
 		System.out.println( "i<j && ++j>h ดย " + ( (i<j) && (++j>h) ) );
+		System.out.println("j="+j);
+
+		System.out.println( "i>j && ++j>h ดย " + ( (i>j) && (++j>h) ) );
+		System.out.println("j="+j);
 
 	}
 
