@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [JAVA 강좌 정리](README.md)
 
 ## Java
 
