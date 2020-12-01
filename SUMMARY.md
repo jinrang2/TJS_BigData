@@ -1,10 +1,15 @@
 # Table of contents
 
-* [JAVA 강좌 정리](README.md)
+* [빅데이터 강좌 정리](README.md)
 
-## Java
+## 강좌 정리
 
-* [변수와 자료형](java/ch02_variable.md)
-* [연산자](java/ch03_variable.md)
-* [조건문](java/condition.md)
+* [변수와 자료형](undefined/ch02_variable.md)
+* [Untitled](undefined/untitled.md)
+* [연산자](undefined/ch03_variable.md)
+* [조건문](undefined/condition.md)
+
+## JAVA
+
+* [Untitled](java/untitled.md)
 
