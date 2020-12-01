@@ -1,7 +1,6 @@
 # Table of contents
 
 * [JAVA 강좌 정리](README.md)
-* [Untitled](untitled.md)
 
 ## Java
 
