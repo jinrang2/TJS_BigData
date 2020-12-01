@@ -5,15 +5,14 @@
 ## 강좌 정리
 
 * [변수와 자료형](undefined/ch02_variable.md)
-* [Untitled](undefined/untitled.md)
 * [연산자](undefined/ch03_variable.md)
 * [조건문](undefined/condition.md)
 
 ## JAVA
 
-* [Untitled](java/untitled.md)
+* [그룹2의문서1](java/grp2doc1.md)
 
-## rrrr
+## ㄱㄱㄱ <a id="undefined-1"></a>
 
-* [Untitled](rrrr/untitled.md)
+* [그룹3의문서1](undefined-1/grp3doc1.md)
 
