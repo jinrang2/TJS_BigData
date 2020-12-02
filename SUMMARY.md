@@ -12,7 +12,7 @@
 
 * [그룹2의문서1](java/grp2doc1.md)
 
-## ㄱㄱㄱ <a id="undefined-1"></a>
+## 그룹3 <a id="grp3"></a>
 
-* [그룹3의문서1](undefined-1/grp3doc1.md)
+* [그룹3의문서1](grp3/grp3doc1.md)
 
