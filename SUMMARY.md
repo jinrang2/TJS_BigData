@@ -10,4 +10,7 @@
   * [03. 연산자](lecture_summary/java/ch03_operator.md)
   * [04. 조건문과 반복문](lecture_summary/java/ch04_condition.md)
   * [05. 배열](lecture_summary/java/ch05_array.md)
+  * [06. 클래스 시작](lecture_summary/java/06..md)
+  * [07. 객체지향 프로그램의 본질](lecture_summary/java/07..md)
+  * [08. 클래스 기초 코딩](lecture_summary/java/08..md)
 
