@@ -9,13 +9,8 @@ public class Quiz4 {
 		for(int i : iArr) {
 			tot += i;
 			
-			if(min > i) {
-				min = i;
-			}	
-			
-			if(max < i) {
-				max = i;
-			}
+			min = min > i ? i : min;
+			max = max < i ? i : max;
 		}
 		
 		avg = (double)tot/iArr.length;

@@ -12,7 +12,7 @@ public class Quiz3 {
 		for(int i : coinUnit) {
 			
 			temp = remainMoney / i;
-			remainMoney = remainMoney - (temp * i);
+			remainMoney %= i;
 			
 			System.out.printf("%d원짜리 %d개 ",i,temp);
 			System.out.println("남은돈:"+remainMoney);
