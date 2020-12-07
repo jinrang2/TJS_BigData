@@ -17,8 +17,5 @@ public class StudentTestMain {
 		
 		Student.summaryPrint();
 		Student.footerPrint();
-		
-		Character ch = new Character('c');
-		System.out.println(ch);
 	}				
 }
