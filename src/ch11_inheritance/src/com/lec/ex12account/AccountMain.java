@@ -1,4 +1,4 @@
-package com.lec.Quiz1;
+package com.lec.ex12account;
 
 public class AccountMain {
 	public static void main(String[] args) {

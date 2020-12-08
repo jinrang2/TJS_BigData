@@ -1,4 +1,4 @@
-package com.lec.Quiz1;
+package com.lec.ex12account;
 
 public class CheckingAccount extends Account {
 	private String cardNo;
