@@ -13,4 +13,7 @@
   * [06. 클래스 시작](lecture_summary/java/06..md)
   * [07. 객체지향 프로그램의 본질](lecture_summary/java/07..md)
   * [08. 클래스 기초 코딩](lecture_summary/java/08..md)
+  * [09. 접근제한자 종류와 Static](lecture_summary/java/09.-static.md)
+  * [10. 패키지](lecture_summary/java/10..md)
+  * [11. 상속](lecture_summary/java/11..md)
 
