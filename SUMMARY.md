@@ -16,4 +16,5 @@
   * [09. 접근제한자 종류와 Static](lecture_summary/java/09.-static.md)
   * [10. 패키지](lecture_summary/java/10..md)
   * [11. 상속](lecture_summary/java/11..md)
+  * [12. 인터페이스](lecture_summary/java/12..md)
 
