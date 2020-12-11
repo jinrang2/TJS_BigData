@@ -2,11 +2,11 @@ package com.mine.store;
 // 본사 지침         : 김치찌개-5,000  부대찌개-6,000  비빔밥-6,000 순대국-5,000  공기밥-1,000원
 public abstract class HeadQuarterStore implements IStore {
 	private String name;
-	private int kimchi;
+	/*private int kimchi;
 	private int bude;
 	private int bibib;
 	private int sunde;
-	private int gonggibab;
+	private int gonggibab;*/
 
 	public HeadQuarterStore(String name) {
 		super();

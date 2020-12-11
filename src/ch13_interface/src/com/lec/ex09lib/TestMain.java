@@ -2,8 +2,8 @@ package com.lec.ex09lib;
 
 public class TestMain {
 	public static void main(String[] args) {
-		Book book1 = new Book("890ㅁ","자바","홍길동");
-		Book book2 = new Book("890ㅂ","하둡","홍끼리");
+		BookLib book1 = new BookLib("890ㅁ","자바","홍길동");
+		BookLib book2 = new BookLib("890ㅂ","하둡","홍끼리");
 		
 		book1.checkIn();
 		book1.checkOut("신길동", "201209");
