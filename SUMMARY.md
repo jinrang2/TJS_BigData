@@ -19,6 +19,7 @@
   * [12. 추상클래스](lecture_summary/java/12.-1.md)
   * [13. 인터페이스](lecture_summary/java/12..md)
   * [14. 디자인패턴](lecture_summary/java/14..md)
+  * [14.2 Strategy 패턴](lecture_summary/java/14.2-strategy.md)
   * [15. Java API](lecture_summary/java/15.-java-api.md)
   * [16. 예외처리](lecture_summary/java/16..md)
   * [17. Java Collection](lecture_summary/java/17.-java-collection.md)
