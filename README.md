@@ -1,1 +1,1 @@
-## 강좌 정리 <a id="summary.md"></a>
+* [강좌 요약](SUMMARY.md)
