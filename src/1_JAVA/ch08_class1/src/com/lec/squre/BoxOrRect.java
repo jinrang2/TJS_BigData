@@ -13,14 +13,14 @@ public class BoxOrRect {
 		this.width = width;
 		this.height = height;
 		this.depth = depth != 0 ? depth : 1;
-		this.unit = '§¨';
+		//this.unit = 'ï¿½ï¿½';
 		this.calNsetVolume();		
 	}
 	
 	public BoxOrRect(int width, int height) {
 		this.width = width;
 		this.height = height;
-		this.unit = '§²';
+		//this.unit = 'ï¿½ï¿½';
 		this.calNsetVolume();
 	}
 	
