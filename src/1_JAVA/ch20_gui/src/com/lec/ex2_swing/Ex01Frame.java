@@ -42,9 +42,19 @@ public class Ex01Frame extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btn) {
-			setVisible(false);
-			dispose();
-			System.exit(ABORT);
+			JOptionPane.showMessageDialog(null, "alert", "alert", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showConfirmDialog(null, "choose one", "choose one", JOptionPane.YES_NO_OPTION);
+			 Object[] options = { "OK", "CANCEL" };
+			 JOptionPane.showOptionDialog(null, "Click OK to continue", "Warning",
+			             JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
+			             null, options, options[0]);
+			 
+			 Object[] possibleValues = { "First", "Second", "Third" };
+
+			 Object selectedValue = JOptionPane.showInputDialog(null,
+			             "Choose one", "Input",
+			             JOptionPane.INFORMATION_MESSAGE, null,
+			             possibleValues, possibleValues[0]);
 		}		
 	}
 }
