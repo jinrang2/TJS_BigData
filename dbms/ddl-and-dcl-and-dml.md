@@ -1,4 +1,4 @@
-# 7. DDL, DCL
+# 7. DDL, DCL,DML
 
 ## **DML  :  Data Manipulation Language ;** **데이터 검색, 수정 등**
 
