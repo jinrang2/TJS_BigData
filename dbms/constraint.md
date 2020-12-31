@@ -12,9 +12,9 @@
 {% hint style="danger" %}
 오라클에서는 NOT NULL과 DEFAULT를 같이 쓸때
 
-\(O\) 칼럼3 타입 DEFAULT 표현식 NOT NULL 
+\(O\) DEFAULT 표현식 NOT NULL 
 
-\(X\) 칼럼3 타입 NOT NULL DEFAULT 표현식
+\(X\) NOT NULL DEFAULT 표현식
 {% endhint %}
 
 ```text
