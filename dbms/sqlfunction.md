@@ -1,12 +1,14 @@
 # 4.SQL함수
 
+### 자주 쓰이는 기능을 미리 구현해둔 객체 단일행 다중행 함수로 구분된다
+
 ## 숫자함수
 
 * ABS\(NUM\) : 절대값
 * ROUND\(NUM, 정수\) : 반올림, 두번째 정수가 음이면 일십백의 자리 양이면 소수점으로 이동
 * TRUNC\(NUM, 정수\) : 지정한 자리수 이하를 버림
 
-## 문자처리함수
+## 문자 처리 함수
 
 * SUBSTR\(STR1, N1, N2\) : 첫번쨰 인자의 N1부터 N2숫자만큼의 문자를 반환
 * LENGTH\(STR1\) : 문자열 길이 
@@ -19,9 +21,9 @@
 * TRIM\(STR1\), LTRIM\(STR1\), RTRIM\(STR2\) : 공백을 모두제거, 문자열 왼쪽의 공백만제거 ,오른쪽제거
 * REPLACE\(STR1, STR2,STR3\) : STR1에서 STR2를 찾아 STR3으로 변경날짜함수
 
-## 날짜함수
+## 날짜 함수
 
-* SYSDATE : 시스템 기준의 현재 날짜
+*  SYSDATE : 시스템 기준의 현재 날짜
 * MONTHS\_BETWEEN\(DATE1, DATE2\) : DATE 1, 2의 날짜 사이가 몇 개월인지 반환
 * ADD\_MONTHS \(DATE1, N1\) : DATE1에 N1 만큼 개월 수를 더한다
 * NEXT\_DAY\(DATE1,  '일요일'\) : DATE1 이후의 가장 빠른 일요일을 반환 요일은 수정가능  
@@ -32,7 +34,7 @@
 
 * TRUNC\(DATE1, FMT\) : DATE1을 ARG1을 기준으로 버림
 
-## 형변환함수
+## 형 변환 함수
 
 * TO\_CHAR\(DATE1, FMT\) : DATE1을 FMT\(날짜 포맷팅\)에 맞춰 변환
 

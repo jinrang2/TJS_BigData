@@ -9,7 +9,6 @@
 ## 강좌 정리 <a id="lecture_summary"></a>
 
 * [JAVA](lecture_summary/java/README.md)
-  * [Untitled](lecture_summary/java/untitled.md)
   * [01. 프로그래밍이란](lecture_summary/java/ch01_programming.md)
   * [02. 변수와 자료형](lecture_summary/java/ch02_variable.md)
   * [03. 연산자](lecture_summary/java/ch03_operator.md)
