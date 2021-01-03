@@ -5,6 +5,7 @@
   * [개인프로젝트](academy-project/undefined/README.md)
     * [1. 제작 배경](academy-project/undefined/1.-rise-of-kingdoms.md)
     * [2. 기능 명세서](academy-project/undefined/2.-2.md)
+    * [Untitled](academy-project/undefined/untitled.md)
     * [9. 관련 기술 및 참고 사이트](academy-project/undefined/2..md)
 
 ## 강좌 정리 <a id="lecture_summary"></a>
