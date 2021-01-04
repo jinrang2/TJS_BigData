@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="8" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
-<window height="1056" maximized="true" width="1264" x="-8" y="0">
+<window height="1056" maximized="true" width="888" x="1096" y="12">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -26,12 +26,24 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="DeptEmp.exerd" partName="DeptEmp.exerd" path="E:/gon/TJS_BigData/src/3_exERD/newProject/DeptEmp.exerd" title="DeptEmp.exerd" tooltip="newProject/DeptEmp.exerd" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/DeptEmp.exerd"/>
+</editor>
+<editor id="com.tomato.exerd.editor.DiagramEditor" name="student.exerd" partName="student.exerd" path="E:/gon/TJS_BigData/src/3_exERD/newProject/student.exerd" title="student.exerd" tooltip="newProject/student.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/student.exerd"/>
+</editor>
+<editor id="com.tomato.exerd.editor.DiagramEditor" name="library.exerd" partName="library.exerd" path="E:/gon/TJS_BigData/src/3_exERD/newProject/library.exerd" title="library.exerd" tooltip="newProject/library.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/library.exerd"/>
+</editor>
+<editor id="com.tomato.exerd.editor.DiagramEditor" name="ShoppingMall.exerd" partName="ShoppingMall.exerd" path="E:/gon/TJS_BigData/src/3_exERD/newProject/ShoppingMall.exerd" title="ShoppingMall.exerd" tooltip="newProject/ShoppingMall.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/ShoppingMall.exerd"/>
 </editor>
 </editors>
 <views>
@@ -132,8 +144,8 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomFolder" ratio="0.59828144" ratioLeft="557" ratioRight="374" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info folder="true" part="bottomFolder" ratio="0.8388829" ratioLeft="781" ratioRight="150" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.tomato.exerd.ui.views.domain" appearance="2" expanded="2">
 <page content="com.tomato.exerd.ui.views.domain" label="도메인"/>
 <page content="com.tomato.exerd.validate.ui.ValidateView" label="검토"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="콘솔"/>
@@ -161,7 +173,27 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/DeptEmp.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/reverseTest.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/untitled.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/student.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/library.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/ShoppingMall.exerd"/>
 </editors>
+<item historyLabel="DeptEmp.exerd" index="0"/>
+<item historyLabel="reverseTest.exerd" index="1"/>
+<item historyLabel="untitled.exerd" index="2"/>
+<item historyLabel="reverseTest.exerd" index="1"/>
+<item historyLabel="untitled.exerd" index="2"/>
+<item historyLabel="DeptEmp.exerd" index="0"/>
+<item historyLabel="untitled.exerd" index="2"/>
+<item historyLabel="DeptEmp.exerd" index="0"/>
+<item historyLabel="student.exerd" index="3"/>
+<item historyLabel="library.exerd" index="4"/>
+<item historyLabel="student.exerd" index="3"/>
+<item historyLabel="library.exerd" index="4"/>
+<item historyLabel="ShoppingMall.exerd" index="5"/>
+<item historyLabel="library.exerd" index="4"/>
+<item historyLabel="student.exerd" index="3"/>
 <item active="true" historyLabel="DeptEmp.exerd" index="0"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -180,6 +212,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="ShoppingMall.exerd" tooltip="newProject/ShoppingMall.exerd">
+<persistable path="/newProject/ShoppingMall.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="library.exerd" tooltip="newProject/library.exerd">
+<persistable path="/newProject/library.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="student.exerd" tooltip="newProject/student.exerd">
+<persistable path="/newProject/student.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="untitled.exerd" tooltip="newProject/untitled.exerd">
+<persistable path="/newProject/untitled.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="reverseTest.exerd" tooltip="newProject/reverseTest.exerd">
+<persistable path="/newProject/reverseTest.exerd"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="DeptEmp.exerd" tooltip="newProject/DeptEmp.exerd">
 <persistable path="/newProject/DeptEmp.exerd"/>
 </file>
