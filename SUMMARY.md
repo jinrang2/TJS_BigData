@@ -18,7 +18,7 @@
   * [05. 배열](lecture_summary/1_java/05.array.md)
   * [06. 클래스 시작](lecture_summary/1_java/06.class-prologue.md)
   * [07. 객체지향 프로그램의 본질](lecture_summary/1_java/07.oop.md)
-  * [08. 클래스 기초 코딩](lecture_summary/1_java/08..md)
+  * [08. 클래스 기초 코딩](lecture_summary/1_java/08.class-initate.md)
   * [09. 접근제한자 종류와 Static](lecture_summary/1_java/09.access-modifier.md)
   * [10. 패키지](lecture_summary/1_java/10.package.md)
   * [11. 상속](lecture_summary/1_java/11.inheritance.md)
