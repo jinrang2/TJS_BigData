@@ -2,16 +2,18 @@ package com.lec.ex0conn;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
 import com.lec.db.DBInfo;
 
-public class InsertDept {
+public class InsertDept2 {
 	public static void main(String[] args) {
 		Connection conn = null;
 		Statement stmt = null;
+		ResultSet rs = null;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("입력할 부서 번호는 ?");
@@ -25,14 +27,23 @@ public class InsertDept {
 		
 		System.out.printf("%d\t%s\t%s\n",deptno, dname, loc);
 		
-		String sql = String.format("INSERT INTO DEPT VALUES (%d,'%s', '%s')", deptno, dname , loc);
+		String sql= String.format("SELECT DEPTNO FROM DEPT WHERE DEPTNO="+deptno);
 		
 		try {
 			Class.forName(DBInfo.ORACLE_DRIVER);
 			conn = DriverManager.getConnection(DBInfo.ORACLE_URL,DBInfo.ORACLE_ID, DBInfo.ORACLE_PWD);
 			stmt = conn.createStatement();
-			int result = stmt.executeUpdate(sql);
-			System.out.println(result > 0 ? "부서입력성공" : "부서입력실패");
+			rs = stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				System.out.println("중복된 부서번호는 입력이 불가합니다.");
+			} else {
+				sql = String.format("INSERT INTO DEPT VALUES (%d,'%s', '%s')", deptno, dname , loc);
+				int result = stmt.executeUpdate(sql);
+				System.out.println(result > 0 ? "부서입력성공" : "부서입력실패");
+			}
+			
+			
 
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.getMessage());

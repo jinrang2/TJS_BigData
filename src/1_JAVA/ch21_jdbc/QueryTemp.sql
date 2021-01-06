@@ -21,3 +21,7 @@ WHERE E.DEPTNO = D.DEPTNO
                 
   
   DELETE FROM DEPT WHERE DEPTNO>40;
+  
+  
+  
+  
