@@ -23,7 +23,7 @@
   * [10. 패키지](lecture_summary/java/10.package.md)
   * [11. 상속](lecture_summary/java/11.inheritance.md)
   * [12. 추상클래스](lecture_summary/java/12.abstract-class.md)
-  * [13. 인터페이스](lecture_summary/java/12.interface.md)
+  * [13. 인터페이스](lecture_summary/java/13.interface.md)
   * [14. 디자인패턴](lecture_summary/java/14.design-pattern.md)
   * [14.2 Strategy 패턴](lecture_summary/java/14.2-strategy-pattern.md)
   * [15. Java API](lecture_summary/java/15.-java-api.md)
