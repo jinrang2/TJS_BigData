@@ -11,11 +11,11 @@
 ## 강좌 정리 <a id="lecture_summary"></a>
 
 * [1\_JAVA](lecture_summary/1_java/README.md)
-  * [01. 프로그래밍이란](lecture_summary/1_java/01..md)
-  * [02. 변수와 자료형](lecture_summary/1_java/02..md)
-  * [03. 연산자](lecture_summary/1_java/03..md)
-  * [04. 조건문과 반복문](lecture_summary/1_java/04..md)
-  * [05. 배열](lecture_summary/1_java/05..md)
+  * [01. 프로그래밍이란](lecture_summary/1_java/01.programming.md)
+  * [02. 변수와 자료형](lecture_summary/1_java/02.variable.md)
+  * [03. 연산자](lecture_summary/1_java/03.operator.md)
+  * [04. 조건문과 반복문](lecture_summary/1_java/04.condition.md)
+  * [05. 배열](lecture_summary/1_java/05.array.md)
   * [06. 클래스 시작](lecture_summary/1_java/06.class-prologue.md)
   * [07. 객체지향 프로그램의 본질](lecture_summary/1_java/07.oop.md)
   * [08. 클래스 기초 코딩](lecture_summary/1_java/08..md)
