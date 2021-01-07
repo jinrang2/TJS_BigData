@@ -15,7 +15,7 @@ public class SelectWhereDname3 {
 		Statement stmt  = null;
 		ResultSet rs	= null;
 		
-		String sql = "SELECT DEPTNO, RPAD(DNAME,10,' ') DNAME, LOC FROM DEPT";
+		String sql = "SELECT DEPTNO, RPAD(DNAME,10,' ') DNAME, RPAD(LOC,9,' ') LOC FROM DEPT";
 		
 		try {
 			Class.forName(DBInfo.ORACLE_DRIVER);
@@ -24,14 +24,16 @@ public class SelectWhereDname3 {
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(sql);
 			
-			System.out.println("DEPTNO\tDNAME\t\tLOC");
+			System.out.println("-------------------------------");
+			System.out.println("DEPTNO\t|DNAME\t\t|LOC");
+			System.out.println("-------------------------------");
 			
 			if(rs.next()) {
 				do {
 						int deptno	 = rs.getInt("DEPTNO");
 						String dname = rs.getString("DNAME");
 						String loc	 = rs.getString("LOC");
-						System.out.printf("%d\t%s\t%s\n",deptno, dname, loc);
+						System.out.printf("%d\t|%s\t|%s|\n",deptno, dname, loc);
 				} while (rs.next());
 			} else {
 				System.out.println("부서가 없습니다");
@@ -64,7 +66,7 @@ public class SelectWhereDname3 {
 						String ename = rs.getString("ENAME");
 						String sal	 = rs.getString("SAL");
 						String grade	 = rs.getString("GRADE");
-						System.out.printf("%s\t%d\t%s\t%s\t%s\n",dname, empno, ename, sal,grade);
+						System.out.printf("%s\t|%d\t|%s\t|%s\t|%s\n",dname, empno, ename, sal,grade);
 				} while (rs.next());
 			} else {
 				System.out.println(dnameLike + "이 들어간 부서에 속한 사원이 없습니다");
