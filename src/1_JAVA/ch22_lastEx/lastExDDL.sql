@@ -65,10 +65,5 @@ WHERE P.JNO = J.JNO
 ORDER BY SUM DESC
 ) A;
 
-desc person;
-
-select SEQ_PERSON_NO.currval from dual;
-
-
-INSERT INTO PERSON VALUES 
-(SEQ_PERSON_NO.NEXTVAL, '혜리', (SELECT JNO FROM JOB WHERE JNAME='가수'), 100,90,80);
+--4번 콤보박스에 넣을 직업리스트
+SELECT JNAME FROM JOB;

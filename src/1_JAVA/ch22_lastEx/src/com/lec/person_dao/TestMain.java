@@ -2,11 +2,11 @@ package com.lec.person_dao;
 
 import java.util.ArrayList;
 
-import com.lec.person.DBConsolePrint;
+import com.lec.att.DBConsolePrint;
 
 public class TestMain {
 	public static void main(String[] args) {
-		PersonDto dto = new PersonDto("È«±æµ¿","¹è¿ì",99,99,99);
+		//PersonDto dto = new PersonDto("È«±æµ¿","¹è¿ì",99,99,99);
 		PersonDao dao = PersonDao.getInstance();
 		
 		/*int result = dao.insertPerson(dto);

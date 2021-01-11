@@ -10,6 +10,20 @@ public class codeTest {
         System.out.println(phoneArray[0]);
         System.out.println(phoneArray[1]);
         System.out.println(phoneArray[2]);
+        
+        
+        int a;
+        double b = 1.1;
+        short c = 1;
+        //a = b;
+        a = c;
+        a = (int)b;
+        System.out.println(a);
+        
+        a = (int)c;
+        
+        System.out.println(a);
+        
     }
 
 

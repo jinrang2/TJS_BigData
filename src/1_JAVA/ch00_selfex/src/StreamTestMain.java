@@ -1,31 +1,24 @@
 import java.util.ArrayList;
-import java.util.stream.Stream;
+import java.util.Arrays;
 
 public class StreamTestMain {
 	public static void main(String[] args) {
-		ArrayList<String> arr = new ArrayList<String>();
+		ArrayList<String> arr = new ArrayList<String>(
+				Arrays.asList("one","two","three","four","five"));
+						
+		for(String a: arr) {
+			System.out.println(a);
+		}
 		
-		arr.add("one");
-		arr.add("two");
-		arr.add("three");
-		arr.add("four");
-		arr.add("five");
-//		arr.add("six");
-//		arr.add("seven");
-//		arr.add("eight");
-//		arr.add("nine");
-//		arr.add("ten");
-		
+		arr.stream().forEach(System.out::println);
 		
 		// allmatch
 		// filter 조건 만족하는애
 		// map 조건 만족하는 애들에게 할 연산
 		// limit 조건 만족하는 애들 최대 몇개
 		// skip 최대 몇개는 스킵하고 출력
-		// foreach 한바퀴 돈다
-		
-		arr.stream().forEach(System.out::println);
-		
+		// foreach 한바퀴 돈다		
+				
 		boolean all3size = arr.stream().allMatch(e -> e.length() >= 3);
 		
 		System.out.println("모두 3글자 이상 :" + all3size);
@@ -43,5 +36,10 @@ public class StreamTestMain {
 		
 		
 		
+	}
+
+	private static Object asList(String string, String string2, String string3, String string4, String string5) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

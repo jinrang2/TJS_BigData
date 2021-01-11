@@ -5,8 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Vector;
 
-import com.lec.person.DBInfo;
+import com.lec.att.DBInfo;
 
 public class PersonDao {
 	public static int SUCCESS = 1;
@@ -161,5 +162,38 @@ public class PersonDao {
 		}
 		
 		return dtos;	
+	}
+	
+	public Vector<String> selectJname(){
+		Vector<String> jnames = new Vector<String>();
+		
+		Connection			conn	= null;
+		PreparedStatement	pstmt	= null;
+		ResultSet			rs		= null;
+		
+		String sql = "SELECT JNAME FROM JOB";
+		
+		try {
+			conn = DriverManager.getConnection(DBInfo.ORACLE_URL, DBInfo.ORACLE_ID,DBInfo.ORACLE_PWD);
+			pstmt = conn.prepareStatement(sql);			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				jnames.add(rs.getString("jname"));
+			}
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				if(rs != null)		rs.close();
+				if(pstmt != null)	pstmt.close();
+				if(conn != null)	conn.close();
+			} catch (Exception e2) {
+				System.out.println(e2.getMessage());
+			}
+		}
+		
+		return jnames;	
 	}
 }

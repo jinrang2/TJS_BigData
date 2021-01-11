@@ -3,7 +3,6 @@ package singleton.step1;
 public class AClass {
 	private int intVar;
 	private static AClass instance; 
-	private int cnt = 0;
 	
 	private AClass() {}
 	

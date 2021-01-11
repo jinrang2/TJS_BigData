@@ -29,7 +29,6 @@ public class PersonDto {
 		this.kor = kor;
 		this.eng = eng;
 		this.mat = mat;
-		this.sum = sum;
 	}
 
 

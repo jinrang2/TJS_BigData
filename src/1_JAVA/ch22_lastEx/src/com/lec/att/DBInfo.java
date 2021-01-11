@@ -1,4 +1,4 @@
-package com.lec.person;
+package com.lec.att;
 
 public class DBInfo {
 	

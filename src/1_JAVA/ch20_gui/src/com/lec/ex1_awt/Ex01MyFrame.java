@@ -1,9 +1,6 @@
 package com.lec.ex1_awt;
 
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
 
 public class Ex01MyFrame extends Frame {
 	private Button btn, btn1;

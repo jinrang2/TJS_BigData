@@ -1,24 +1,32 @@
-package com.lec.person;
+package com.lec.att;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
+/*
+ * DB의 값이 아래와 같은 형태로 이쁘게 출력되게 한다
+ * +------+------+------+
+ * | col1 | col2 | col3 |
+ * +------+------+------+
+ * | val1 | val2 | val3 |
+ * | val4 | val5 | val6 |
+ * +------+------+------+
+ */
 public class DBConsolePrint {
 	private HashMap<Integer, ArrayList<String>> rsList;
-	private int maxColCnt;
-
+	
 	public DBConsolePrint() {
 		super();
-		rsList = new HashMap<Integer, ArrayList<String>>();
-		
-		maxColCnt=0;	
+		rsList = new HashMap<Integer, ArrayList<String>>();	
 	}
 
-	public void print() {
+	public String getPrintStr() {
 		HashMap<Integer, Integer> mapColWidth = new HashMap<Integer, Integer>();
 		Iterator<Integer> keys = rsList.keySet().iterator();
+		String printStr = "";
 		
+		// 1. 칼럼들의 가장 큰 글자 길이를 찾는다 
 		while(keys.hasNext()) {
 			Integer key = keys.next();
 			ArrayList<String> temp = rsList.get(key);
@@ -33,6 +41,8 @@ public class DBConsolePrint {
 			mapColWidth.put(key, maxColSize);
 		}
 		
+		
+		// 2. 1에서 구한 길이 단위로 표의 가장자리를 그린다
 		keys = rsList.keySet().iterator();
 		String line = "+";
 		String cols = "|";
@@ -48,6 +58,7 @@ public class DBConsolePrint {
 			line += "+";
 		}
 		
+		// 2. 칼럼의 목차를 쓴다
 		keys = rsList.keySet().iterator();
 		
 		while(keys.hasNext()) {
@@ -56,23 +67,20 @@ public class DBConsolePrint {
 						
 			cols += (" " + rpad(rsList.get(key).get(0),colMax+1,' ')+"|");
 			
-		}
+		}		
 		
-		while(keys.hasNext()) {
-			Integer key = keys.next();
-			int colMax = mapColWidth.get(key); 
-			
-			
-			cols += (" " + rpad(rsList.get(key).get(0),colMax+1,' ')+"|");
-		}
+		/* 여기까지 그린다	 
+		 * +------+------+------+
+		 * | col1 | col2 | col3 |
+		 * +------+------+------+
+		 */
 		
-		//mapColMax.size();
-		System.out.println();
-		System.out.println();
-		System.out.println(line);
-		System.out.println(cols);
-		System.out.println(line);
+		printStr += "\n";
+		printStr += (line+"\n");
+		printStr += (cols+"\n");
+		printStr += (line+"\n");
 		
+		// 3. rsList의 열기준 맵을 행기준 맵으로 바꾼다
 		HashMap<Integer, ArrayList<String>> pivot=new HashMap<Integer, ArrayList<String>>(); 
 		keys = rsList.keySet().iterator();
 		
@@ -96,43 +104,49 @@ public class DBConsolePrint {
 			}			
 		}
 		
-		keys = pivot.keySet().iterator();
 		
+		// 4. 피벗맵을 통해 다시 그린다.
+		keys = pivot.keySet().iterator();		
 		while(keys.hasNext()) {
 			Integer key = keys.next();
 			int curCol=0;
 			
 			ArrayList<String> rowResult = pivot.get(key);
 			
-			//mapColWidth.get(1);
 			String rows="|";
 								
 			for (int i = 0, size= rowResult.size() ; i < size ; i++) {				
 				curCol++;
-				//System.out.println(i);
-				//System.out.println(rowResult.get(i));
 				rows += (" " + rpad(rowResult.get(i), mapColWidth.get(curCol) + 1 ,' ')+"|");
 			}
 			
-			System.out.println(rows);
+			printStr += (rows+"\n");
 		}
 		
-		System.out.println(line);
-		System.out.println();
-		System.out.println();
+		printStr += (line+"\n");
+		printStr += "\n";
+		
+		// 5. 표의 아래쪽 가장자리를 그리고 마친다.
+		
+		return printStr;
+	}
+	
+	public void print() {
+		System.out.println(getPrintStr());
 	}
 	
 	public void add(int colKey, String colValue) {
-		ArrayList<String> temp = new ArrayList<String>();
+		ArrayList<String> temp; 
 		Integer col = colKey;		
 		
 		if (rsList.get(colKey) == null) {
-			temp.add(colValue);
+			temp = new ArrayList<String>();
 			rsList.put(col, temp);
 		} else {
-			temp = rsList.get(colKey);
-			temp.add(colValue);			
+			temp = rsList.get(colKey);						
 		}
+
+		temp.add(colValue);
 	}
 	
 	public void add(int colKey, Integer colValue) {
