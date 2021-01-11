@@ -1,7 +1,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class codeTest {
+public class regExpTest {
 
 
     public static void main(String[] args) throws Exception{
@@ -10,20 +10,6 @@ public class codeTest {
         System.out.println(phoneArray[0]);
         System.out.println(phoneArray[1]);
         System.out.println(phoneArray[2]);
-        
-        
-        int a;
-        double b = 1.1;
-        short c = 1;
-        //a = b;
-        a = c;
-        a = (int)b;
-        System.out.println(a);
-        
-        a = (int)c;
-        
-        System.out.println(a);
-        
     }
 
 
@@ -34,10 +20,10 @@ public class codeTest {
 
         Matcher matcher = tellPattern.matcher(phoneNumber);
         if(matcher.matches()) {
-            //Á¤±Ô½Ä¿¡ ÀûÇÕÇÏ¸é matcher.groupÀ¸·Î ¸®ÅÏ
+            //ï¿½ï¿½ï¿½Ô½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ matcher.groupï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             return new String[]{ matcher.group(1), matcher.group(2), matcher.group(3)};
         }else{
-            //Á¤±Ô½Ä¿¡ ÀûÇÕÇÏÁö ¾ÊÀ¸¸é substringÀ¸·Î ÈÞ´ëÆù ¹øÈ£ ³ª´©±â
+            //ï¿½ï¿½ï¿½Ô½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ substringï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             
             String str1 = phoneNumber.substring(0, 3);
             String str2 = phoneNumber.substring(3, 7);
