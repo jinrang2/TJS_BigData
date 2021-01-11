@@ -13,7 +13,7 @@
 ## 강좌 정리 <a id="lecture_summary_group"></a>
 
 * [1\_JAVA](lecture_summary_group/1_java/README.md)
-  * [01. 프로그래밍이란](lecture_summary_group/1_java/01.programming.md)
+  * [01. Java 프로그램이란](lecture_summary_group/1_java/01.programming.md)
   * [02. 변수와 자료형](lecture_summary_group/1_java/02.variable.md)
   * [03. 연산자](lecture_summary_group/1_java/03.operator.md)
   * [04. 조건문과 반복문](lecture_summary_group/1_java/04.condition.md)
