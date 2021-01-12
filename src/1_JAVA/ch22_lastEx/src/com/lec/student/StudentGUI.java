@@ -22,8 +22,7 @@ import javax.swing.JTextField;
 
 import com.lec.att.DBConsolePrint;
 
-public class StudentGUI extends JFrame implements ActionListener {
-	
+public class StudentGUI extends JFrame implements ActionListener {	
 	
 	private Container contenPane;
 	private JPanel jpup, jpbtn1, jpbtn2;
@@ -126,7 +125,7 @@ public class StudentGUI extends JFrame implements ActionListener {
 		contenPane.add(jpbtn1);
 		contenPane.add(jpbtn2);
 		contenPane.add(scrollPane, BorderLayout.SOUTH);
-		
+				
 		setBounds(500,300, 600, 700);
 		setResizable(true);
 		setVisible(true);
@@ -315,6 +314,7 @@ public class StudentGUI extends JFrame implements ActionListener {
 			comMname.setSelectedIndex(0);					
 			txtScore.setText("");			
 			curExpel = 0;
+			
 		}
 				
 	}
