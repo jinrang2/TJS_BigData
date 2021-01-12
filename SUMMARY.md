@@ -12,10 +12,6 @@
 
 ## 강좌 정리 <a id="lecture_summary_group"></a>
 
-* [0.자습](lecture_summary_group/0.selfstudy/README.md)
-  * [01.Java Stream](lecture_summary_group/0.selfstudy/01.java-stream.md)
-  * [02.Java Regexp](lecture_summary_group/0.selfstudy/02.java-regexp.md)
-  * [03. SQL MERGE](lecture_summary_group/0.selfstudy/03.-sql-merge.md)
 * [1\_JAVA](lecture_summary_group/1_java/README.md)
   * [01. Java 프로그램이란](lecture_summary_group/1_java/01.programming.md)
   * [02. 변수와 자료형](lecture_summary_group/1_java/02.variable.md)
@@ -51,4 +47,8 @@
   * [9. View](lecture_summary_group/2_dbms/9.view.md)
   * [10. 트랜잭션관리](lecture_summary_group/2_dbms/10.transaction.md)
   * [11. 인덱스](lecture_summary_group/2_dbms/11.index.md)
+* [99.자습](lecture_summary_group/99.selfstudy/README.md)
+  * [01.Java Stream](lecture_summary_group/99.selfstudy/01.java-stream.md)
+  * [02.Java Regexp](lecture_summary_group/99.selfstudy/02.java-regexp.md)
+  * [03. SQL MERGE](lecture_summary_group/99.selfstudy/03.-sql-merge.md)
 
