@@ -1,0 +1,12 @@
+﻿/* 디자인 부분*/
+td {
+	text-align: right;
+}
+
+b {
+	color:red;
+}
+
+fieldset{
+	width:0px;
+}

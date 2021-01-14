@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- 아이디와 비번을 입력받아 파라미터 이름 id,pw로 서버측에 넘기는 역할-->
+    <form action="http://www.naver.com" method="post">
+        <table>
+            <caption><h2>로그인</h2></caption>
+            <tr>
+                <td>
+                    아이디
+                </td>
+                <td>
+
+                    <input type="text" name="uid" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    패스워드
+                </td>
+                <td>
+                    <input type="password" name="upw" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2"><input type="submit" value="로그인" /></td>
+            </tr>
+        </table>
+
+        <fieldset class="login_form">
+            <legend class="blind">로그인</legend>
+            <div class="id_area">
+                <div class="input_row" id="id_area">
+                    <span class="input_box">
+                        <label for="id" id="label_id_area" class="lbl">아이디</label>
+                        <input type="text" id="id" name="id" accesskey="L" placeholder="아이디" class="int" maxlength="41" value="">
+                    </span>
+                    <button type="button" disabled="" title="delete" id="id_clear" class="wrg">삭제</button>
+                </div>
+                <div class="error" id="err_empty_id" style="display:none" aria-live="assertive"></div>
+            </div>
+            <div class="pw_area">
+                <div class="input_row" id="pw_area">
+                    <span class="input_box">
+                        <label for="pw" id="label_pw_area" class="lbl">비밀번호</label>
+                        <input type="password" id="pw" name="pw" placeholder="비밀번호" class="int" maxlength="16">
+                    </span>
+                    <button type="button" disabled="" title="delete" id="pw_clear" class="wrg">삭제</button>
+                    <div class="ly_v2" id="err_capslock" style="display:none;">
+                        <div class="ly_box">
+                            <p><strong>Caps Lock</strong>이 켜져 있습니다.</p>
+                        </div>
+                        <span class="sp ly_point"></span>
+                    </div>
+                </div>
+                <div class="error" id="err_empty_pw" style="display:none" aria-live="assertive"></div>
+            </div>
+
+            <input type="submit" title="로그인" alt="로그인" value="로그인" class="btn_global" id="log.login">
+            <div class="check_info">
+                <div class="login_check">
+                    <span class="login_check_box">
+                        <input type="checkbox" id="login_chk" name="nvlong" class="" value="off" />
+                        <label for="login_chk" id="label_login_chk" class="ico_keep_check ">로그인 상태 유지</label>
+                    </span>
+                </div>
+                <div class="pc_check">
+                    <span class="ip_check">
+                        <a href="/login/ext/help_ip3.html" target="_blank" id="ipguide" title="">
+                            <span class="ip_txt01">IP</span>
+                            <span class="ip_txt02">보안</span>
+                        </a>
+                        <span class="ip_ch">
+                            <input type="checkbox" id="ip_on" value="off" class="" />
+                            <label for="ip_on" id="label_ip_on" class="security ">OFF</label>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+
+
+
+</body>
+</html>

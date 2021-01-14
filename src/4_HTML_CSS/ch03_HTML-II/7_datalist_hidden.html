@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    전송 안되는 파라메터<input type="text" name="test" />
+    <form action="" method="get">
+        <p> 전화 <input type="tel" placeholder="010-000-0000" name="tel" required="required" /></p>
+        <p> 카드 <input type="tel" placeholder="xxxx-xxxx" pattern="[0-9]{4}-[0-9]{4}" name="card" title="카드번호는 숫자4자리-숫자4자리 입니다." /></p>
+        <p>
+            업무 <input type="text" list="jobdata" name="job" />
+            <datalist id="jobdata">
+                <option value="분석"></option>
+                <option value="설계"></option>
+                <option value="개발구현"></option>
+                <option value="테스트"></option>
+                <option value="유지보수"></option>
+            </datalist>
+        </p>
+        <p>
+            업무2 <select name="job2">
+                <option>분석</option>
+                <option>설계</option>
+                <option>개발구현</option>
+                <option>테스트</option>
+                <option>유지보수</option>
+            </select>
+        </p>
+        
+        <!-<--><p>안보임<input type="hidden" name="no" value="99" /></p> -->
+        <p></p><input type="submit" value="전송합니다" />
+    </form>
+    <a href="#test">맨위 입력</a>
+</body>
+</html>

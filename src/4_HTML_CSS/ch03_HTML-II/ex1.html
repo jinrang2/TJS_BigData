@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="ex1.css" rel="stylesheet" type="text/css" />
+    <script>
+		function chk() {
+			if (frm.name.value.length < 2) {
+				frm.name.focus();
+				alert("이름은 2글자 이상 입력하세요");
+				return false;
+			} else if (frm.id.value.length < 4) {
+				frm.id.focus();
+				alert("아이디는 4글자 이상 입력하세요");
+				return false;
+			} else if (frm.pwd.value.length < 1) {
+				frm.pwd.focus();
+				alert("비밀번호는 1글자 이상 입력하세요");
+				return false;
+			} else if (frm.pwd2.value.length < 1) {
+				frm.pwd2.focus();
+				alert("비밀번호확인은 1글자 이상 입력하세요");
+				return false;
+			} else if (frm.pwd.value != frm.pwd2.value) {
+				frm.pwd2.value = "";
+				frm.pwd2.focus();
+				alert("같은 비밀번호를 입력하세요");
+				return false;
+			}
+
+            return true;
+		}
+    </script>
+</head>
+<body>
+    <h1>회 원 가 입</h1>
+    <form name="frm" action="" method="get" onsubmit="return chk()">
+        <fieldset style="width:0px">
+            <legend>필수 입력 사항</legend>
+            <table id="require">
+                <tr>
+                    <td>
+                        이름<b>*</b>
+                    </td>
+                    <td>
+                        <input type="text" name="name" placeholder="2글자 이상 입력" size="25" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        아이디<b>*</b>
+                    </td>
+                    <td>
+                        <input type="text" name="id" placeholder="4글자 이상 입력" size="25" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        비밀번호<b>*</b>
+                    </td>
+                    <td>
+                        <input type="password" name="pwd" placeholder="1글자 이상 입력" size="25" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        비밀번호확인<b>*</b>
+                    </td>
+                    <td>
+                        <input type="password" name="pwd2" placeholder="1글자 이상 입력, 비밀번호 일치" size="25" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        이메일<b>*</b>
+                    </td>
+                    <td>
+                        <input type="text" name="email" placeholder="id@domain.com co.kr" size="25"
+                               pattern="[a-zA-Z0-9가-힣]{1,20}@[a-zA-Z]{1,10}\.[a-zA-Z]{2,3}\.?[a-zA-Z]+" 
+                               />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        전화<b>*</b>
+                    </td>
+                    <td>
+                        <input type="text" name="tel" placeholder="010-0000-0000" size="25"
+                               pattern="0\d{2,3}-?[0-9]{3,4}-?[0-9]{4}" 
+                               />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>추가 입력 사항</legend>
+            <table>
+                <tr>
+                    <td>
+                        출신지역
+                    </td>
+                    <td>
+                        <select value="출신지역">
+                            <option value="seoul">서울</option>
+                            <option value="kyongki">경기</option>
+                            <option value="inchoen">인천</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        결혼유무
+                    </td>
+                    <td>
+                        <input type="radio" name="marry" value="um" checked="checked" />미혼
+                        <input type="radio" name="marry" value="m" />기혼
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        자식유무
+                    </td>
+                    <td>
+                        <input type="checkbox" name="lang" value="kor" checked="checked" />딸
+                        <input type="checkbox" name="lang" value="eng" />아들
+                    </td>
+                </tr>
+                <tr>
+                    <td id="bottom" colspan="2">
+                        <input type="submit" value="전송" />
+                        <input type="reset" />
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+</form>
+
+</body>
+</html>
