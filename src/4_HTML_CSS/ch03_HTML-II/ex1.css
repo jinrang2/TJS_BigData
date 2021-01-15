@@ -7,6 +7,14 @@ b {
 	color:red;
 }
 
-fieldset{
-	width:0px;
+td#col1{
+	text-align:right;
+}
+
+td#col2 {
+	text-align:left;
+}
+
+fieldset {
+	width:350px;
 }

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #wrap, #footer{
+            width:600px; margin:0 auto; border:1px solid gray;
+        }
+
+        div p{ /* 후손 선택자 = 자손 선택자 포함*/
+            font-size:25px;
+        }
+
+        div > ul > li > p { /* 자손 선택자*/
+            color:red;
+        }
+
+        #header{
+            overflow:hidden;
+        }
+
+        #header .logo{  /* 후손 선택자 */
+           float:left; padding:10px 30px 10px 100px;
+        }
+
+			#header > .copy { /* 자손 선택자*/
+				float: left;
+				padding: 15px 100px 10px 30px;
+			}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="copy">
+            <h2>00 주식회사이름</h2>
+        </div>
+    </div>
+    <div id="wrap">
+        <p>
+            양부 살인죄’ 청원 23만 돌파…
+        </p>
+
+        <ul>
+            <li><p>[코로나19] 정부·지자체 대응</p></li>
+            <li><p>집단감염 줄고 개인접촉 늘었다…"16일 거리두기·설 특별방역 ...</p></li>
+            <li><p>[세종=뉴시스]강종민 기자 = 윤태호 중앙사고수습본부 방역총괄반장(보건복지부 공공보건정책관)이 6일 오전 정부세종청사에서 신종 코로나바이러스 감염증(코로나19) 대응 현황을 브리핑 하고 있다.</p></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <div class="logo">
+            <h1>logo</h1>
+        </div>
+        <div class="copy">
+            <h1>00 주식회사이름</h1>
+        </div>
+    </div>
+</body>
+</html>

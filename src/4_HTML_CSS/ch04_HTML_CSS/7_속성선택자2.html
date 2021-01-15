@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input[name='name']{
+            width:150px;
+            background-color:skyblue;
+            border:1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>예약자 정보</legend>
+            <table>
+                <tr>
+                    <td><lable for="name">예약자</lable></td>
+                    <td><input type="text" name="name" id="name" /></td>
+                </tr>
+                <tr>
+                    <td><lable for="tel">연락처</lable></td>
+                    <td><input type="text" name="tel" id="tel" /></td>
+                </tr>
+                <tr>
+                    <td>예약인원</td>
+                    <td><input type="number" name="cnt" value="0" />명</td>
+                </tr>
+                <tr>
+                    <td>입금은행</td>
+                    <td><input type="text" name="bank"/>명</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" /></td>    
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
