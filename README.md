@@ -16,5 +16,5 @@ Rise of Kingdoms 게임의 유저 정보 수집기 준비중입니다.
 
 ### 1. [1\_JAVA](lecture_summary_group/1_java/)
 
-### 2. [2\_DBMS](lecture_summary_group/2_dbms/)
+### 2. [2\_DBMS](lecture_summary_group/02.dbms/)
 
