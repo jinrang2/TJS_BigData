@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{padding:0px; margin:0px;}
+        div {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+
+        #div1{
+            position:absolute;      /* 절돼 좌표*/
+            left:0; top:0;
+            background-color:red;
+            opacity:0.6;
+        }
+
+        #div2{
+            position:fixed;
+            left:50px; top:50px;
+            background-color:green;
+        }
+
+        #div3{
+            position:absolute;
+            left:100px; top:100px;
+            background-color:blue;
+        }
+
+        #div4 {
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            background-color: yellow;
+        }
+
+        #div5 {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+    <div id="div4">div4
+        <div id="div5">div5</div>
+    </div>
+    
+</body>
+</html>

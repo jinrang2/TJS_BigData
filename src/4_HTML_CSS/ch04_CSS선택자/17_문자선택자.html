@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{ width:800px; margin:0 auto;}
+        #header{text-align:center;
+                   border-bottom:1px solid #cccccc;
+        }
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{ /*문자선택자*/
+            color:blue; font-weight:bold;            
+        }
+
+        #content p:nth-child(2)::first-letter,
+        #content p:nth-child(3)::first-letter { /*문자선택자*/
+            font-size:1.5em;
+        }
+        #content p:last-child span{ /* 문자 선택자를 모를 경우*/
+            font-size:2em;                                  
+        }
+        #content p:nth-child(2)::selection{
+            background-color:violet;
+            color:yellow;
+        }
+
+        #footer ul{
+            overflow:hidden;
+            border-top:1px solid #cccccc;
+        }
+
+        #footer ul li{
+            list-style:none;
+            float:left;
+            margin:15px 20px 5px 20px;
+        }
+
+        #footer ul li:first-child{padding:10px 0 0 0;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+        </div>
+        <div id="content">
+            <p>
+                이는 뭇 눈에 아름답고 위하여서. 있을 아니한 무엇이 얼마나 안고, 설레는 불어 황금시대다. 커다란 풍부하게 거선의 그리하였는가?
+            </p>
+            <p>
+                그들에게 것은 우리의 평화스러운 인생에 커다란 석가는 그들의 청춘 약동하다. 위하여서 하여도 앞이 천고에 끓는 노래하며 구하지 철환하였는가? 구하지 방지하는 희망의 있으며, 따뜻한 봄바람이다. 무한한 영락과 스며들어 꽃이 구하지 가는 있는 전인 커다란 피다.
+            </p>
+            <p>
+                기쁘며, 그들은 전인 유소년에게서 어디 것이다. 가치를 보는 대중을 말이다. 가지에 찾아 이상의 없으면, 꽃이 것이다. <span>유소년에게서</span> 대고, 못할 내려온 새 굳세게 이것은 뜨거운지라, 힘차게 이것이다.
+            </p>
+
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="/0115/logo.png" alt="회사로고" /></li>
+                <li><img src="/0115/address.png" alt="회사주소" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

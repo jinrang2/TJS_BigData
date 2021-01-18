@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #content {
+            border: 1px solid #cccccc;
+            padding:10px;
+        }
+            #thxmsg{
+                font-weight:bold;
+                font-size:2em;
+                text-align:center;
+            }
+
+            #dear{
+                font-weight:bold;
+            }
+
+            #from{
+                text-align:right;
+            }
+
+            #content a{
+                font-size:1.5em;
+                line-height:100px;
+            }
+
+            #content a:after { /* 링크선택자*/
+                content: " - " attr(href);
+            }
+
+        #content #link{
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p id="thxmsg">XX 쇼핑몰을 이용해 주셔서 대단히 감사합니다.</p>
+
+        <p id="dear">p 고객님꼐</p>
+
+        <p id="eventmsg">p 고객님을 최대로 귀하게 모시는 쿠폰을 발송해 드립니다.</p>
+
+        <p id="from">From admin</p>
+
+        <hr color="#cccccc" />
+
+        <div id="link">
+            <a href="http://www.tjoeunit.co.kr" target="_blank">더조은쇼핑몰</a>
+        </div>
+    </div>
+
+
+        
+</body>
+</html>

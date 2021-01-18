@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            width: 70%;
+            margin: 0 auto;
+            height: 400px;
+            border: 1px solid red;
+            background-image: url('sulhyun.jpg')
+        }
+
+            div:nth-child(1) {
+                background-position: left top; /* 디폴트 0 0*/
+            }
+
+            div:nth-child(3) {
+                background-position: center; /* 50% 0 */
+            }
+
+            div:nth-child(5) {
+                background-position: right top; /* 100% 0 */
+            }
+
+            div:nth-child(7) {
+                background-position: right bottom; /* 100% 100% */
+            }
+
+            div:nth-child(9) {
+                background-repeat: no-repeat; /* 100% 0 */
+            }
+
+            div:nth-child(11) {
+                background-repeat: repeat-x; /* 100% 0 */
+                background-attachment:fixed;
+            }
+    </style>
+</head>
+    
+<body>
+    <div><h1>설현</h1></div><br />
+    <div><h1>설현</h1></div><br />
+    <div><h1>설현</h1></div><br />
+    <div><h1>설현</h1></div><br />
+    <div><h1>설현</h1></div><br />
+    <div><h1>설현</h1></div><br />
+</body>
+</html>

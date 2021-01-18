@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		#wrap {width:800px;}
+
+		#wrap #header {
+			text-align:center;
+			font-size:25px;
+			font-weight:bold;
+			border-bottom:1px solid #cccccc;
+			padding-bottom: 20px;
+		}
+
+		#content ul li:not(#web){
+			background-color:yellow;
+		}
+
+		#wrap #content ul li a{
+			text-decoration:none;
+			color:blue;
+		}
+ 
+		#wrap #content ul li a:after { /* 링크선택자*/
+			content: " - " attr(href);
+		}
+
+		#footer ul {
+			overflow: hidden;
+			border-top: 1px solid #cccccc;
+		}
+
+			#footer ul li {
+				list-style: none;
+				float: left;
+				text-decoration:none;
+				margin: 15px 20px 5px 20px;
+			}
+
+				#footer ul li:first-child {
+					padding: 10px 0 0 0;
+				}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1>Weekly connect Website</h1>
+		</div>
+		<div id="content">
+			<ul>
+				<li><a href="http://naver.com" target="_blank">네이버</a></li>
+				<li><a href="http://google.com" target="_blank">구글</a></li>
+				<li><a href="http://daum.com" target="_blank">다음</a></li>
+				<li><a href="http://yahoo.com" target="_blank">야후</a></li>
+				<li id="web"><a href="http://www.tjoeun.co.kr/" target="_blank">더조은</a></li>
+			</ul>
+		</div>
+		<div id="footer">
+			<ul>
+				<li><img src="/0115/logo.png" alt="회사로고" /></li>
+				<li><img src="/0115/address.png" alt="회사주소" /></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
