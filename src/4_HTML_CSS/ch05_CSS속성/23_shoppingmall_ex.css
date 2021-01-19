@@ -1,0 +1,239 @@
+﻿* {
+	margin: 0px auto;
+	padding: 0px;	
+}
+
+#header, .section1, .section2, #footer,
+.slide_banner, .side_banner, 
+.hit_product, .md_product,
+.office_logo,.office_address, .office_address{
+	border: 1px solid #cccccc;
+}
+
+#header, .lnb, .logo .logoimg, .hitmenu li {
+	border: 1px dashed #cccccc;
+}
+
+/* 배치 및 사이징 */
+#footer {
+	width: 1000px;
+}
+
+.gnb, .hitmenu, .lnb {
+	height: 30px;
+	line-height: 30px;
+}
+
+	.gnb li {
+		width: 100px;
+	}
+		
+	.logo .logoimg {
+		width: 200px;
+		height: 100px;
+		line-height: 100px;
+	}
+
+	.hitmenu{
+		position:absolute;
+		right:50px;		
+		top:160px;
+	}
+
+	.hitmenu li {
+		width: 80px;
+	}
+
+		.hitmenu li a {
+			width: 80px;
+		}
+
+
+	.lnb li {
+		width: 125px;
+	}
+	
+
+#content {
+	width: 1000px;
+	height: 1220px;
+}
+.section1 {
+	width: 1000px;
+	height: 400px;
+}
+
+.slide_banner {
+	width: 600px;
+	height: 400px;
+	line-height: 400px;
+	box-sizing: border-box;
+}
+
+.side_banner {
+	width: 400px;
+	height: 400px;
+	line-height: 400px;
+	box-sizing: border-box;
+}
+
+.section2 {
+	width: 1000px;
+	height: 800px;
+}
+
+.hit_product, .md_product {
+	width: 240px;
+	height: 400px;
+	line-height: 400px;
+	box-sizing: border-box;
+}
+
+.office_logo {
+	width: 200px;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+.office_address {
+	width: 600px;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+.office_info {
+	width: 200px;
+	height: 100px;
+	box-sizing: border-box;
+}
+	
+
+
+/* 배치 */
+.gnb > ul > li,
+.lnb > ul > li {
+	display:inline-block;
+}
+
+.hitmenu,
+.section1, .section2,
+#footer {
+	overflow: hidden;
+}
+
+	.hitmenu > ul > li,
+	.slide_banner,
+	.side_banner,
+	.hit_product,
+	.md_product,
+	.office_logo,
+	.office_address,
+	.shopping_info {
+		float: left;
+		list-style: none;
+	}
+
+
+/* 여백 */
+
+.logo {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+#content {
+	margin: 10px auto;
+}
+
+.hit_product,
+.md_product {
+	text-align: center;
+	margin: 0 0 10px 7px;	
+}
+
+.section2 {
+	margin: 10px 0 0 0 auto;
+}
+
+.office_info {
+	float:right;
+}
+
+.copyright{
+	clear:both;
+}
+
+
+/* 색깔 및 폰트*/
+a {
+	text-decoration:none;
+}
+
+.gnb {
+	background-color: black;
+	text-align: center;
+}
+
+	.gnb li {
+		text-align: center;
+	}
+
+	.gnb a {
+		color: white;		
+	}
+
+.logo .logoimg{
+	
+	text-align:center;
+
+}
+
+.hitmenu {
+	text-align: right;
+}
+
+	.hitmenu li {
+		text-align: center;
+	}
+
+	.hitmenu a {
+		color: black;
+		display: block;
+	}
+
+.lnb {
+	font-weight: bold;
+	text-align: center;	
+}
+
+	.lnb a {
+		color: black;
+	}
+
+.slide_banner ul, .side_banner ul,
+.hit_product ul, .md_product ul {
+	list-style:none;
+}
+
+.slide_banner li, .side_banner li,
+.hit_product li, .md_product li {
+	text-align: center;
+}
+
+.slide_banner a, .side_banner a,
+.hit_product a, .md_product a {
+	color: #cccccc;
+	text-align: center;
+}
+
+.copyright {
+	text-align:center;
+	background-color:black;
+	color:white;
+}
+
+#cr{
+	text-align:center;
+		
+}
