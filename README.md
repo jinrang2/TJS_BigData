@@ -14,7 +14,9 @@ Rise of Kingdoms 게임의 유저 정보 수집기 준비중입니다.
 
 각 수업 별 강좌는 챕터 별로 정리 되어 있고 챕터를 대표 할만한 소스가 있는 경우를 링크해 두었습니다.
 
-### 1. [1\_JAVA](lecture_summary_group/1_java/)
+깃의 폴더명은 해당 용어의 영문 정식 용어를 반영했습니다. \(예 : CSS 선택자 -&gt; CSS Selector\)
 
-### 2. [2\_DBMS](lecture_summary_group/02.dbms/)
+### [1\_JAVA](lecture_summary_group/01.java/)
+
+### [2\_DBMS](lecture_summary_group/02.dbms/)
 
