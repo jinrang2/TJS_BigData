@@ -14,7 +14,13 @@ Rise of Kingdoms 게임의 유저 정보 수집기 준비중입니다.
 
 각 수업 별 강좌는 챕터 별로 정리 되어 있고 챕터를 대표 할만한 소스가 있는 경우를 링크해 두었습니다.
 
-### 1. [1\_JAVA](lecture_summary_group/1_java/)
+깃의 폴더명은 해당 용어의 영문 정식 용어를 반영했습니다. \(예 : CSS 선택자 -&gt; CSS Selector\)
 
-### 2. [2\_DBMS](lecture_summary_group/02.dbms/)
+### [01.JAVA](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/01.java)
+
+### [02.DBMS](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/02.dbms)
+
+### [03.요구사항분석](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/03.requirement-analysis)
+
+### [04.HTML-CSS](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/04.html-css)
 
