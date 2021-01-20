@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<meta charset="utf-8" name="viewport" content="width=device-width" ,
+		  initial-scale="1.0 user_scalable:no " />
+	
+	<style>
+		* {padding:0; margin:0;}
+		li {list-style:none;}
+		a {text-decoration:none;}
+
+		header {
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			background: url('0120_imgEx1/bg_header.png');
+			position: relative;
+		}
+
+		header .left{
+			position:absolute;
+			left:10px;
+			top:7px;
+		}
+			header .right {
+				position: absolute;
+				right: 10px;
+				top: 7px;
+			}
+
+		#gnb ul {
+			overflow: hidden;
+			border: 5px solid gray;
+		}
+
+			#gnb ul li {
+				float: left;
+				width:10%;
+				margin:1.25%;
+				border:1px solid gray;
+				box-sizing:border-box;
+				text-align:center;
+			}
+
+		#gnb {display:none;}
+		#toggle:checked ~ #gnb {display:block;}
+		#toggle {display:none;}
+		/* lnb */
+		#lnb ul {
+			overflow: hidden;
+		}
+			#lnb ul li {
+				float: left;
+				width:20%;
+				border:1px solid #FFFFFF;
+				box-sizing:border-box;
+				background-color:#137163;
+				height:60px;
+				line-height:60px;
+				text-align:center;
+				font-weight:bold;
+			}
+		#lnb ul li a{
+			display:block;
+			color:white;
+		}
+		/* content */
+		#content {
+			padding: 10px;
+			color: #333333;
+		}
+
+		#content #content_header {
+			padding:10px;
+			border-bottom:1px solid gray;
+		}
+
+		#content #content_body  p:first-child{
+			font-weight:bold;
+			color:deepskyblue;
+			padding:10px 0;
+			/* 말줄임 태그*/
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+
+			#content #content_body p:last-child {
+				background: url("0120_imgEx1/bg_image.jpg") -500px 0;
+				font-weight: bold;
+			}
+
+		footer .logo {
+			text-align: center;
+			border-top: 1px solid lightgray;
+			border-bottom: 1px solid lightgray;
+		}
+
+		footer .logo img{
+			width:200px;
+		}
+
+		footer .info{
+			text-align:center;
+			font-weight:bold;
+			font-size:1.5em;
+		}
+
+		footer .address{
+			text-align:center;
+			font-size:.8em;
+		}
+
+	</style>
+</head>
+<body>
+	<input type="checkbox" id="toggle" />
+	<header>
+		<a href="#" class="left">
+			<img src="0120_imgEx1/category.png" />
+		</a>
+		<h1>Mobile</h1>
+		<lable for="toggle" class="right">
+			<img src="0120_imgEx1/menu.png" />
+		</lable>
+	</header>
+
+	<div id="gnb">
+		<ul>
+			<li><a href="#">gnb1</a></li>
+			<li><a href="#">gnb2</a></li>
+			<li><a href="#">gnb3</a></li>
+			<li><a href="#">gnb4</a></li>
+			<li><a href="#">gnb5</a></li>
+			<li><a href="#">gnb6</a></li>
+			<li><a href="#">gnb7</a></li>
+			<li><a href="#">gnb8</a></li>
+		</ul>
+	</div>
+	<div id="lnb">
+		<ul>
+			<li><a href="#">lnb1</a></li>
+			<li><a href="#">lnb2</a></li>
+			<li><a href="#">lnb3</a></li>
+			<li><a href="#">lnb4</a></li>
+			<li><a href="#">lnb5</a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<div id="content_header">
+			<h1>홍길동</h1>
+		</div>
+		<div id="content_body">
+			<p>
+				공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다.
+			</p>
+			<p>
+				모든 국민은 건강하고 쾌적한 환경에서 생활할 권리를 가지며, 국가와 국민은 환경보전을 위하여 노력하여야 한다. 국가안전보장회의는 대통령이 주재한다. 모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.
+			</p>
+		</div>
+	</div>
+	<footer>
+		<div class="logo">
+			<img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="로고" />
+
+		</div>
+	</footer>
+	<div class="info">XX 주식회사</div>
+	<div class="address">서울시 마포구 노고산동 xx빌딩 704호</div>
+</body>
+</html>
