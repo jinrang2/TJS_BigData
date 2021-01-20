@@ -16,7 +16,11 @@ Rise of Kingdoms 게임의 유저 정보 수집기 준비중입니다.
 
 깃의 폴더명은 해당 용어의 영문 정식 용어를 반영했습니다. \(예 : CSS 선택자 -&gt; CSS Selector\)
 
-### [01.JAVA](lecture_summary_group/01.java/)
-### [02.DBMS](lecture_summary_group/02.dbms/)
-### [03.요구사항분석](lecture_summary_group/03.requirement-analysis)
-### [04.HTML-CSS](lecture_summary_group/04.html-css)
+### [01.JAVA](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/01.java)
+
+### [02.DBMS](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/02.dbms)
+
+### [03.요구사항분석](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/03.requirement-analysis)
+
+### [04.HTML-CSS](https://github.com/jinrang2/TJS_BigData/tree/c1177fb66e6f78749a3f926ee826e83daa6221eb/lecture_summary_group/04.html-css)
+
