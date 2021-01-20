@@ -16,7 +16,7 @@ Rise of Kingdoms 게임의 유저 정보 수집기 준비중입니다.
 
 깃의 폴더명은 해당 용어의 영문 정식 용어를 반영했습니다. \(예 : CSS 선택자 -&gt; CSS Selector\)
 
-### [1\_JAVA](lecture_summary_group/01.java/)
-
-### [2\_DBMS](lecture_summary_group/02.dbms/)
-
+### [01.JAVA](lecture_summary_group/01.java/)
+### [02.DBMS](lecture_summary_group/02.dbms/)
+### [03.요구사항분석](lecture_summary_group/03.requirement-analysis)
+### [04.HTML-CSS](lecture_summary_group/04.html-css)
