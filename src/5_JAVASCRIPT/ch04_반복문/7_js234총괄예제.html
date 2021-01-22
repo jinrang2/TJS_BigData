@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var y = 0;
+        var n = 0;
+        var sum = 0;
+        var point;
+        var pointStr;
+
+        for (var i = 0; i < 5; i++) {
+            answer = confirm("누적할래?");
+            if (answer) {
+                
+                pointStr = prompt("누적할 점수?");
+                point = Number(pointStr);
+
+                if (pointStr != "" && !isNaN(point)) {
+                    document.write("맞는 입력" + pointStr + "</br>");
+                    y++;
+                    sum += point;
+                } else {
+                    document.write("틀린 입력" + pointStr + "</br>");
+                    n++;
+                }
+                
+            } else {
+                n++;        
+            }
+        }
+
+        document.write("5번 입력</br>");
+        document.write("누적점수 : "+ sum + "</br>");
+        document.write("점수를 제대로 입력한 횟수 : " + y + "</br>");
+        document.write("점수를 잘못 입력한 횟수 : " + n + "</br>");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

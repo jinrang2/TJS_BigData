@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var dow = new Date().getDay();
+        var dowKor;
+
+        document.write(dow);
+
+        switch (dow){
+            case 0: document.bgColor = 'red'; dowKor = "일요일"; break;
+            case 1: document.bgColor = 'orange'; dowKor = "월요일"; break;
+            case 2: document.bgColor = 'yellow'; dowKor = "화요일"; break;
+            case 3: document.bgColor = 'green'; dowKor = "수요일"; break;
+            case 4: document.bgColor = 'blue'; dowKor = "목요일"; break;
+            case 5: document.bgColor = 'navy'; dowKor = "금요일"; break;
+            case 6: document.bgColor = 'violet'; dowKor = "토요일"; break;
+        }
+
+        document.fgColor = 'white';
+        document.write(dowKor);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

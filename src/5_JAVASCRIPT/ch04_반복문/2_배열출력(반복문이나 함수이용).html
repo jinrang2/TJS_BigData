@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr = [273, 32, '홍길동'];
+
+        // 일반 for문
+
+        for (i = 0; i < arr.length ; i++) {
+            document.write(arr[i]);
+            document.write('</br>');
+        }
+
+        /// for in 문
+        for (var i in arr) {
+            document.write(arr[i]);
+            document.write('</br>');
+        }
+
+        arr.forEach(dwrite);        
+
+        function dwrite(a, b,c,d,e,f) {
+            document.write(b + ":");
+            document.write(a);
+            document.write("뭐니3:" + c);
+            document.write('</br>');
+        }
+
+
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        function onChk() {
+            document.write(Boolean(Nan));
+
+            strAge = frm.age.value;
+            age = Number(strAge);
+
+            if (frm.name.value.length < 2) {
+                alert("이름은 2글자 이상 입력하세요");
+                frm.name.focus();
+                return false;
+            } else if (strAge == '' || isNaN(age) || age < 0 || age > 120) {
+                alert("나이는 0~120으로 입력하세요");
+                frm.age.value = '';
+                frm.age.focus();
+                return false;
+            } else if (frm.address.value.length == 0 ) { // 빈스트링 false
+                alert("주소를 입력하세요");
+                frm.address.focus();
+                return false;
+            } 
+
+            // false로 인식되는 값들 : 불린 아닌데 false로 인식되는애들 '',0,NaN
+
+            return true;
+        }
+    </script>
+    <style>
+        div {
+            text-align: center;
+            width: 300px;
+            border: 2px solid cornflowerblue;
+        }
+
+        input {
+            border: 2px solid cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <form name="frm" onsubmit="return onChk()">
+        <div>
+            <br />
+            <p>
+                이름
+                <input type="text" name="name" placeholder="이름은 2글자 이상" />
+            </p>
+            <p>
+                나이
+                <input type="text" name="age" placeholder="나이는 0~120까지" />
+            </p>
+            <p>
+                주소
+                <input type="text" name="address" placeholder="주소는 입력만" />
+            </p>
+            <input type="submit" value="입력" />
+            <br />
+            <br />
+        </div>
+        
+    </form>
+</body>
+</html>

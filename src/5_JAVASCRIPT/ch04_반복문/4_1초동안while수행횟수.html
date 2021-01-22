@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var cnt = 0;
+        var startTime = new Date().getTime();
+        document.write(startTime);
+        document.write('</br>');
+        
+
+        while (new Date().getTime() <= startTime + 1000) {
+            ++cnt;
+        }
+        var endTime = new Date().getTime();
+
+        document.write(endTime);
+        document.write('</br>');
+        document.write(cnt);
+        document.write('</br>');
+
+        cntStr = '3707701';
+        
+        document.write('</br>');
+        temp = cntStr.length % 3;
+
+        for (i = 0; i < cntStr.length ; i++) {
+            if (i && i % 3  == temp) {
+                document.write(',');
+            }
+            document.write(cntStr[i]);
+        }
+
+        
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function onChk() {
+            var num1 = Number(frm.num1.value);
+            var num2 = Number(frm.num2.value);
+            var msg;
+
+            if (num1 > num2) {
+                msg = '수1이 ' + (num1 - num2) + ' 큽니다';
+            } else {
+                msg = '수2가 ' + (num2 - num1) + ' 큽니다'                
+            }
+
+            alert(msg);
+            
+            document.body.innerHTML += (msg+'</br>');
+
+            frm.num1.value = num1;
+            frm.num2.value = num2;
+
+            return true;
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return onChk()">
+        <div>
+            <br />
+            <p>
+                수1
+                <input type="number" name="num1"  />
+            </p>
+            <p>
+                수2
+                <input type="number" name="num2"  />
+            </p>
+            
+            <input type="submit" value="입력" />
+            <br />
+            <br />
+        </div>
+    </form>
+</body>
+</html>

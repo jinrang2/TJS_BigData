@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>
+    </title>
+    <script>
+        /*var grade = Number(prompt("학점을 입력하세요", "제대로 입력하세요"));
+
+        grade = Math.trunc(grade);
+
+        switch (grade) {
+            case 4: document.write("A학점이군요"); break;
+            case 3: document.write("B학점이군요"); break;
+            case 2: document.write("C학점이군요"); break;
+            case 1: 
+            case 0: document.write("분발하세요"); break;
+            default:
+                document.write("제대로 입력하세요");
+        }
+
+        document.write("<br/>");*/
+
+        var kor = Number(prompt("국어를 입력하세요", "제대로 입력하세요"));
+        var math = Number(prompt("수학을 입력하세요", "제대로 입력하세요"));
+
+        grade = (kor + math) / 20;
+
+        grade = Math.trunc(grade);
+
+        document.write(grade);
+               
+        switch (grade) {
+            case 10:
+            case 9: document.write("수"); break;
+            case 8: document.write("우"); break;
+            case 7: document.write("미"); break;
+            case 6: document.write("양"); break;
+            case 5: 
+            case 4: 
+            case 3: 
+            case 2: 
+            case 1: 
+            case 0: document.write("분발하세요"); break;
+            default:
+                document.write("제대로 입력하세요");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

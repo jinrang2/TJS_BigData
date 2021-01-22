@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var varString;
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+        varString = '홍길동';
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+        varString = 10.5;
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+        varString = true;
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+
+        varString = function () { alert('함수속'); };
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+
+        varString = { name: '홍길동', age: 28 };
+
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+        document.write('1.varString의 타입 : ' + typeof (varString.name) + '-' + varString.name + '<br>');
+        document.write('1.varString의 타입 : ' + typeof (varString.age) + '-' + varString.age + '<br>');
+
+        varString = [10, '홍', function () { }, true, { name: '홍길동', age: 28 }, [1, 2, 3]];
+        document.write('1.varString의 타입 : ' + typeof (varString) + '-' + varString + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

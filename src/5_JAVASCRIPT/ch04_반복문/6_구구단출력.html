@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        while (1) {
+
+            var gugudanStr = prompt("구구단 입력하세요", "2~9까지만");
+            var gugudan = Number(gugudanStr);
+
+            if (gugudanStr != '' && !isNaN(gugudan) && gugudan >= 2 && gugudan <= 9) {
+                break;
+            } else {
+                alert("떼끼");
+            }
+        }
+
+        var gg = gugudan;
+
+        document.write("<table>");
+        document.write("<Caption>");
+        document.write("<h2>2~9단까지 구구단들</h2>");
+        document.write("</Caption>");
+        for (var i = 0; i <= 9; i++) {
+            
+
+            document.write("<tr>");
+            for (var j = 2; j <= 9; j++) {
+                document.write("<td>");
+
+                if (i == 0) {
+                    document.write(j + "단");
+                }
+                else {
+                    document.write(j + " * " + i + " = " + j * i);
+                }
+                document.write("</td>");
+            
+            }
+            document.write("</tr>");
+        }
+        
+        document.write("</table>");
+        
+
+
+    </script>
+    <style>
+        * {padding:0;}
+        td {
+            padding: 5px;
+            margin: 0px;
+            background-color: lightskyblue
+        }
+
+        tr:first-child {
+            text-align:center;
+            background-color:lightskyblue;
+        }
+         
+
+        table{
+            border:2px solid red;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
