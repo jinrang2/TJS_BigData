@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 매개변수가 없으면 -999 1개이상이면 누적값 리턴
+        var sum1 = sumAll();
+        var sum2 = sumAll(1);
+        var sum3 = sumAll(1, 2, 3, 4, 5);
+
+        function sumAll() {
+            var rst = 0;
+            if (arguments.length == 0) {
+                rst = -999;
+            } else if (arguments.length >= 1) {
+                
+
+                for (var i in arguments) {
+                    rst += arguments[i];
+                }
+            }
+
+            return rst;
+        }
+
+        document.write(sum1);
+        document.write('<br>');
+        document.write(sum2);
+        document.write('<br>');
+        document.write(sum3);
+        document.write('<br>');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

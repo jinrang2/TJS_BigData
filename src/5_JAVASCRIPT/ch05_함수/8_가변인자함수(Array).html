@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr1 = [273, 2, 3, 'Hello',];
+        var arr2 = Array(273, 2, 3, 'Hello',);
+        var arr3 = [, , ,];
+        var arr4 = Array(3);
+        var arr5 = [];
+        var arr6 = [];
+
+        arrChk(arr1);
+        arrChk(arr2);
+        arrChk(arr3);
+        arrChk(arr4);
+        arrChk(arr5);
+        arrChk(arr6);
+
+        function arrChk(arr) {
+            document.write("arr의 크기:" + arr.length);
+            document.write('<br>');
+            document.write("arr:" + arr);
+            document.write('<br>');
+            /*for (a in arr) {
+                document.write(arr[a]);
+                document.write('<br>');
+            }*/
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

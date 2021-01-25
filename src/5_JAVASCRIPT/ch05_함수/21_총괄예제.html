@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*
+         * 1초마다 10초동안 body의 백그라운드 이미지가 바뀌고 시간이 출력되도록 자바스크립트로 구현
+        */
+
+        document.write('123');     
+        document.body.style.backgroundImage = "url('0125_img/img01.png')";
+        document.write('<h3>' + new Date() + '</h3>');
+        
+        var sec = 1;
+        var id;
+        
+        id = setInterval(function () {
+            document.write('<h3>' + new Date() + '</h3>');
+            document.body.style.color = 'white';            
+            img_name = '0125_img/img0' + ((sec++ % 3) + 1) + '.png';                
+            document.body.style.backgroundImage = "url('" + img_name + " ')";
+        }, 1000);        
+        
+        
+        
+        setTimeout(function () {
+            clearInterval(id);
+        }, 10000);
+
+
+    </script>
+    <style>
+        body {
+            
+        }
+       
+    </style>
+</head>
+<body>
+    
+
+</body>
+</html>

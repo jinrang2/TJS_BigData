@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // a가 만든 부분        
+        function pythagoras(width, height) {
+            function square(x) { return x * x; }
+            return Math.sqrt(square(width) + square(height));
+        }        
+    </script>
+    <script>
+        // b가 만든 부분 밑변 높이 빗변을 받아 직각 삼각형 여부 
+        function square(width, height, hypotenuse) {
+            if (width * width + height * height == hypotenuse * hypotenuse) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <script>
+        document.write(pythagoras(3, 4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
