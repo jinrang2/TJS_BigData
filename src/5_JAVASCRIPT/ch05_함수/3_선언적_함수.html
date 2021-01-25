@@ -6,10 +6,19 @@
     <title></title>
     <script src="3.js"></script>
     <script>
-        fun();
-        
-        fun();
-        alert(fun);
+        fun();    // 함수2 경고
+        function fun() {
+            alert('함수1');
+        }
+        function fun() {
+            alert('함수2');
+        }
+        fun();    // 함수2 경고
+        var fun = function () {
+            alert('함수3');
+        };
+        fun();    // 함수3 경고
+
     </script>
 </head>
 <body>
