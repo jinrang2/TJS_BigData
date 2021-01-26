@@ -58,7 +58,7 @@
   * [02.기본문법](lecture_summary_group/05.javascript/02.basic_grammer.md)
   * [03.조건문](lecture_summary_group/05.javascript/03.condition.md)
   * [04.반복문](lecture_summary_group/05.javascript/04.loop.md)
-  * [Untitled](lecture_summary_group/05.javascript/untitled-3.md)
+  * [05.함수](lecture_summary_group/05.javascript/05.function.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled-2.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled-1.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled.md)
