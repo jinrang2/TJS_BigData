@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*
+         *  class Person{
+         *      private String name;         *      
+         *  }
+         * 
+         * 
+         * */
+        var student = {
+            name: '홍길동',
+            kor: 92,
+            mat: 93,
+            eng: 100,
+            sci: 98,
+            toString: function () {
+                var output = '';
+
+                for (var key in this) {
+                    if (key != 'toString') {
+                        output += key + ":" + this[key] + '<br>';
+                    }
+                }
+
+                return output;
+            }
+        }
+
+        /*var output = '';
+        for (var key in student) {
+            if (key != 'toString') {
+                output += key + ":" + student[key] + '<br>';
+            }
+        }*/
+
+        document.write(student);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = [];
+
+        student.push({ name: '홍', kor: 100, mat: 98, eng: 88, sci: 99 });
+        student.push({ name: '김', kor: 100, mat: 98, eng: 88, sci: 99 });
+        student.push({ name: '나', kor: 100, mat: 98, eng: 88, sci: 99 });
+        student.push({ name: '박', kor: 100, mat: 98, eng: 88, sci: 99 });
+        student.push({ name: '이', kor: 100, mat: 98, eng: 88, sci: 99 });
+
+        for (var idx in student) {
+            student[idx].getSum = function () {
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+
+            student[idx].getAvg = function () {
+                return (this.kor + this.mat + this.eng + this.sci) / 4;
+            };
+
+            student[idx].toString = function () {
+                var output = '';
+                for (var key in this) {
+                    if (key != 'toString' && key != 'getAvg' && key != 'getSum') {
+                        output += key + ':' + this[key] + '\n';
+                    } else if (key == 'getSum' || key == 'getAvg') {
+                        output += key.substring(3) + ":" + this[key]() + '\n';
+                    }
+                }
+
+                return output;
+            };
+        }
+
+        function replaceAll(output, oldStr, newStr) {
+
+            return output.split(oldStr).join(newStr);
+        }
+
+        for (var idx in student) {
+            alert(student[idx]);
+            document.write(replaceAll(student[idx].toString(), "\n", "<br>"));
+        }
+
+        document.write('<h2>3. forEach()이용</h2>');
+
+        // 3.forEach() ///
+        student.forEach(function (data, idx) {
+            document.write(replaceAll(data.toString(), "\n", "<br>"));
+        })
+        
+        
+        
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

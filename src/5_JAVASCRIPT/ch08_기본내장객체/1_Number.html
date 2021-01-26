@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var priNum = 273.21;
+        var objNum = new Number(273.21);
+        document.write('priNum의 타입은' + typeof (priNum) + '<br />');
+        document.write('objNum의 타입은' + typeof (objNum) + '<br />');
+        document.write('priNum.toFiexd(1)' + priNum.toFixed(1) + '<br />');
+        document.write('objNum.toFiexd(1)' + objNum.toFixed(1) + '<br />');
+        document.write('priNum을 생성할 때 수행한 함수' + priNum.constructor);
+        document.write('objNum을 생성할 때 수행한 함수' + objNum.constructor);
+
+        if (priNum.constructor == objNum.constructor) {
+            document.write('prinum과 objNum는 타입이 같다');
+        } else {
+            document.write('prinum과 objNum는 타입이 다르다');
+        }
+
+        Number.prototype.method1 = function () {            
+            return '메소드1';
+        }
+
+        
+        
+        document.write(priNum.method1());
+        document.write(objNum.method1());
+
+        objNum.prototype.method2 = function () {
+            return '메소드2';
+        };
+
+        document.write(priNum.method2());       
+        document.write(objNum.method2());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

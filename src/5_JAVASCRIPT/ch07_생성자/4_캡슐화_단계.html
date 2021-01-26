@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            if (w < 0) {
+                throw '음수 가로 길이는 없습니다'; // 예외발생
+            } else {
+                var width = w;
+            }
+
+            if (h < 0) {
+                throw '음수 높이는 없습니다'; // 예외발생
+            } else {
+                var height = h;
+            }
+            
+            this.getWidth = function () { return width; }
+            this.getHeight = function () { return height; }
+            this.setWidth = function (w) { width = w; }
+            this.setHeight = function (h) { height = h; }
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };
+
+        try {
+            var rect = new Rectangle(5, 7);
+        } catch (e) {
+            location.href = '공사중.html';
+        }
+        
+        document.write('가로 : ' + rect.getWidth() + ", 세로 : " + rect.getHeight());
+        document.write('넓이 : ' + rect.getArea());
+
+        try {
+            rect.setWidth(1); rect.setHeight(-7);
+        } catch (e) {
+            document.write = ('<h6>' + e + '수정안됨</h6>');
+        }
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

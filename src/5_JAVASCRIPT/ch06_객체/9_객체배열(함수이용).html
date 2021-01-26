@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var students = [];
+        students.push(makeStudent('홍길동', 100, 90, 100, 95));
+        students.push(makeStudent('김길동', 40, 90, 40, 75));
+        students.push(makeStudent('나길동', 30, 20, 50, 85));
+        students.push(makeStudent('박길동', 50, 30, 70, 55));
+        students.push(makeStudent('이길동', 60, 50, 80, 65));
+                
+        students.forEach(function (data,idx) {
+            document.write(data);
+        });
+        
+        function makeStudent(name, kor, mat, eng, sci) {
+            student = {
+                name: name,
+                kor: kor,
+                mat: mat,
+                eng: eng,
+                sci: sci,
+                getSum: function () {
+                    return this.kor + this.mat + this.eng + this.sci;
+                },
+                getAvg: function () {
+                    return this.getSum() / 4;
+                },
+                toString: function() {
+                    var output = '';
+                    for (var key in this) {
+                        if (key != 'toString' && key != 'getAvg' && key != 'getSum') {
+                            output += key + ':' + this[key] + ' ';
+                        } else if (key == 'getSum' || key == 'getAvg') {
+                            output += key.substring(3) + ":" + this[key]() + " ";
+                        }
+                    }
+
+                    return output + '<hr>';
+                },
+            };
+
+            return student;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

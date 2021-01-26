@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var student = { name: '홍길동' };
+        student['name'] = '김길동';
+        student.name = '신길동'; // 기존 객체의 속성값 변경
+
+        student.kor = 100;
+        student.mat = 90;
+        student.hobby = '프로그래밍';
+        student.toString = function() {
+            var output = '';
+            for (key in this) {
+                if (key != 'toString') {
+                    output += key + ' : ' + this[key] + '<br />';
+                }
+            }
+            return output;
+        };
+
+        document.write(student);
+        delete (student.hobby);
+        document.write(student);
+
+    </script>
+</head>
+<body>
+    
+
+</body>
+</html>

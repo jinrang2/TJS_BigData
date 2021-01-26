@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            if (w < 0) {
+                throw '음수 가로 길이는 없습니다'; // 예외발생
+            } else {
+                var width = w;
+            }
+
+            if (h < 0) {
+                throw '음수 높이는 없습니다'; // 예외발생
+            } else {
+                var height = h;
+            }
+
+            this.getWidth = function () { return width; }
+            this.getHeight = function () { return height; }
+            this.setWidth = function (w) { width = w; }
+            this.setHeight = function (h) { height = h; }
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };
+
+        var rect1 = new Rectangle(5, 3);
+        var rect2 = new Rectangle(3, 4);
+        //document.write(rect1.constructor);
+        //document.write(rect2.constructor);
+
+        if (rect1.constructor = rect2.constructor) {
+            document.write('rect1과 rect2는 타입이 같다');
+        } else {
+            document.write('rect1과 rect2는 타입이 ekfmek');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

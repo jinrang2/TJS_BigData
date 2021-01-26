@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            if (w < 0) {
+                throw '음수 가로 길이는 없습니다'; // 예외발생
+            } else {
+                var width = w;
+            }
+
+            if (h < 0) {
+                throw '음수 높이는 없습니다'; // 예외발생
+            } else {
+                var height = h;
+            }
+
+            this.getWidth = function () { return width; }
+            this.getHeight = function () { return height; }
+            this.setWidth = function (w) { width = w; }
+            this.setHeight = function (h) { height = h; }
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };
+
+        function Square(length) {
+            this.base = Rectangle;
+            this.base(length, length);
+        }
+
+        Square.prototype = Rectangle.prototype;
+
+        var rect = new Square(5, 7);
+
+        document.write(rect.getArea());
+        document.write('<br>');
+
+        var square = new Square(10);
+
+        document.write(square.getArea());
+        document.write('<br>');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
