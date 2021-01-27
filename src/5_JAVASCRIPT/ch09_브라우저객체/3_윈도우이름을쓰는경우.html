@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function openWin() {
+            var child = open('', 'childWin', 'width=300,height=200');
+
+            if (child) {
+                child.document.write('<h1>새창</h2>');
+            } else {
+                alert('팝업차단을 해제하셔야 새창이 열립니다');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button>새창열기</button>
+
+    <a href="http://www.daum.net" target="childWin">다음으로</a>
+</body>
+</html>

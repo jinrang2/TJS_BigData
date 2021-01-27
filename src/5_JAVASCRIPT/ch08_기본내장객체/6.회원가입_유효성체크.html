@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            var str = "abc#abcㄱㅏ가";
+            var patternNum = /[0-9]/;           // 숫자패턴
+            var patternEng = /[a-zA-Z]/;        //영문패턴
+            var patternKor = /[가-힣ㄱ-ㅎㅏ-ㅣ]/; //한글패턴
+            var patternSpe = /[!@#$%^&*()_+-]/;
+            var name = frm.name.value;
+            var mail = frm.mail.value;
+            var pw = frm.pw.value;
+
+            /*document.write(patternEng.test('a111'));
+            document.write(patternNum.test('a111'));
+            document.write(patternSpe.test('a111'));*/
+
+            
+            var mailchk1 = mail.indexOf('@') == -1 || mail.indexOf('@') == 0 || mail.indexOf('@') == mail.length - 1;
+            var temp = mail.split('@');
+            var mailchk2 = patternEng.test(temp[0]) && patternEng.test(temp[1]);
+
+            if (frm.name.value.length == 0) {
+                alert('이름을 입력하세요');
+                frm.name.focus();
+                return false;
+            } else if (patternNum.test(name) || patternSpe.test(name)) {
+                alert('이름은 특수문자나 숫자가 올 수 없습니다');
+                frm.name.focus();
+                frm.name.value = "";
+                return false;
+            } else if (mail.length == 0) {
+                alert('메일을 입력하세요');
+                frm.mail.focus();
+                return false;
+            } else if (mailchk1 == true || mailchk2 == false) {
+                alert('메일에는 알파벳과 알파벳 사이에 @를 입력해야합니다.');
+                frm.mail.focus();
+                return false;
+            } else if (pw.length < 4) {
+                alert('비밀번호는 4자 이상 입력하세요' + pw.length);                
+                frm.pw.focus();
+                return false;
+            } else if (!patternEng.test(pw) || !patternNum.test(pw) || !patternSpe.test(pw)) {
+                alert('비밀번호는 영문, 숫자, 특수문자를 섞어야 합니다\n' + pw);
+                frm.pw.focus();
+                return false;
+            } else if (pw != frm.pwchk.value) {
+                alert('같은 비밀번호를 입력하세요');
+                frm.pwchk.focus();                
+                return false;
+            }
+
+            return result;
+        }
+
+        function login() {
+            return true;
+        }
+
+    </script>
+    <style>
+        div {
+            border:2px solid #385d81;
+            text-align:center;
+            width:400px;
+        }
+
+        input {
+            border: 2px solid #385d81;
+        }
+
+            input[type='button'], input[type='submit'], input[type='reset'] {
+                background-color: #385d81;
+                color:white;
+            }
+
+    </style>
+</head>
+<body>
+    <br />
+    <br />
+    <form name="frm" onsubmit="return chk()">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        이름
+                    </td>
+                    <td>
+                        <input type="text" name="name" placeholder="특수문자와 숫자 못와" />
+                    </td>
+                <tr />
+                <tr>
+                    <td>
+                        메일
+                    </td>
+                    <td>
+                        <input type="text" name="mail" placeholder="메일형식에 맞추세요" />
+                    </td>
+                <tr />
+                <tr>
+                    <td>
+                        비밀번호
+                    </td>
+                    <td>
+                        <input type="password" name="pw" placeholder="" />
+                    </td>
+                <tr />
+                <tr>
+                    <td>
+                        비밀번호확인
+                    </td>
+                    <td>
+                        <input type="password" name="pwchk" placeholder="" />
+                    </td>
+                <tr />
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="회원가입" />
+                        <input type="reset" value="취소" />
+                        <input type="button" value="로그인" onclick="chk()"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

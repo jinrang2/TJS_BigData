@@ -5,13 +5,14 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
+        function historyback() {
+            history.go(-1);
+            //history.back();
+        }
 
-        var patternSpe = /[!@#$%^&*()]/;
-
-        alert(patternSpe.test('a111'));
     </script>
 </head>
 <body>
-
+    <button onclick="historyback()">뒤로가기(이전페이지로)</button>
 </body>
 </html>

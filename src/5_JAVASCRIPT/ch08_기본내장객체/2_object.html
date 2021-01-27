@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        Object.prototype.test = function () {
+            document.write(this);
+        };
+
+        var num = 273;
+        num.test();
+        var str = 'Hello, JS';
+        str.test();
+        var obj = {
+            name: '홍길동', age: 25,
+            toString: function () {
+                return this.name + '은' + this.age;
+            }
+        };
+        obj.test();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

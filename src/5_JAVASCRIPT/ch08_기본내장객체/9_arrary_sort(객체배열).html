@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+        }
+
+        Student.prototype.getSum = function () {
+            return this.kor + this.mat;
+        };
+
+        Student.prototype.getAvg = function () {
+            return this.getSum() / 2;
+        }
+
+        Student.prototype.toString = function () {
+            var output = '';
+            for (var key in this) {
+                if (key != 'toString' && key != 'getSum' && key != 'getAvg') {
+                    output += key + ":" + this[key] + ' ';
+                } else if (key == 'getSum') {
+                    output += '총점 : ' + this[key]() + ' ';
+                } else if (key == 'getAvg') {
+                    output += '평균 : ' + this[key]() + ' ';
+                }
+            }
+            return output + '<br>';
+        }
+
+        var students = [new Student('홍', 70, 100),
+        new Student('김', 100, 100), new Student('이', 77, 88),
+            new Student('박', 100, 40), new Student('윤', 60, 55),];
+
+        document.write('원데이터:' + students);
+
+        Student.prototype.sort = function (left, right) {
+            return left.getSum() - right.getSum()
+        }
+
+        students.slice(0, 3);
+        document.write(students);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

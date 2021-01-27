@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<!-- 작은 그림이 있는 parent-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child;
+
+        function openBig() {
+            var child = open('4_big.html','','width=500, height=610');
+
+            if (!child) {
+                alert('팝업차단을 해제하셔야 새창이 열립니다');
+            } 
+        }
+
+        function closeBig() {
+            child.close();
+        }
+
+    </script>
+</head>
+<body>
+    <h2> 작은 그림의 parent 창</h2>
+    <img src="ch09_img/small.jpg" alt="'작은그림" 
+         onmouseover="openBig()"
+         onmouseout="closeBig()" />
+         
+
+</body>
+</html>

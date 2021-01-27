@@ -5,10 +5,11 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-
-        var patternSpe = /[!@#$%^&*()]/;
-
-        alert(patternSpe.test('a111'));
+        var child = open('', '', 'width=300, height=200');
+        child, moveTo(0, 0);
+        setInterval(function () {
+            child.moveBy(10, 10);
+        }, 100);
     </script>
 </head>
 <body>

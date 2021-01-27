@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var str = 'abcd@abcd@abc';
+        var str = new String('abcd@aBCd@abc');
+
+
+        String.prototype.replaceA = function (oldStr, newStr) {
+            return this.split(oldStr).join(newStr);
+        };
+
+        document.write('글씨길이 : ' + str.length + '<br>');
+        document.write('글씨더하기: ' + str.concat('123') + '<br>');
+        // 3~5까지
+        document.write('글씨추출:' + str.substring(3, 5) + '<br>');
+        // 3~5글자 = substring(3,8)
+        document.write('글씨추출:' + str.substr(3, 5) + '<br>');
+        document.write('앞부터 일치 위치 :' + str.indexOf('@') + '<br>');
+        document.write('뒬부터 일치 위치 :' + str.lastIndexOf('@') + '<br>');
+        document.write('@를 " "로 :' + str.replace('@', ' ') + '<br>');
+        document.write('@를 " "로 :' + str.replaceAll('@', ' ') + '<br>');
+        document.write('@를 " "로 :' + str.replaceA('@', ' ') + '<br>');
+        document.write('" yi"를 spae없애기:' + ' yi'.trim() + '<br>');
+        document.write("대문자를 변환 " + str.toUpperCase() + '<br>');
+        document.write("소문자로 변환 " + str.toLowerCase() + '<br>');
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

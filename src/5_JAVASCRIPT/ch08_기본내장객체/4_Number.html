@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var num1 = 273.5210332;
+
+        num2 = 0.000000000000000273; // 2.73e-15
+
+        document.write(num1 + '<br>');
+
+        document.write('지수형표현:' + num2.toExponential(5));
+        document.write('<br>')
+        document.write('소수점1자리:' + num1.toFixed(2));
+        document.write('<br>')
+        document.write('소수점1자리:' + Math.round(num1 * 10) / 10);
+        document.write('<br>')
+        document.write('숫자5개만' + num1.toPrecision(5));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
