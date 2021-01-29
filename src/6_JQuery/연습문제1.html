@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td {
+            background-color:green;
+            width:200px;
+            height:200px;
+            margin:0;
+            padding:0;
+        }
+
+        .tdClick {background-color:red;}
+        img{
+            width:200px;
+            height:200px;
+        }
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var dIdx = parseInt(Math.random() * 9);
+            $('p').text("답:" + dIdx);
+
+            $('td').click(function () {
+                $('td').removeClass('tdClick'); 
+                $(this).addClass('tdClick');
+                var tdpos = $(this).index();
+                var trpos = $(this).parent().attr('id').substring(2, 3);
+                var posHint = "답:" + dIdx + "클릭(" + trpos + ',' + tdpos + ")"
+
+                $('p').text(posHint);
+
+                var answer = trpos * 3 + tdpos;
+
+                if (answer == dIdx) {
+                    $('p').text("정답입니다 " + posHint);
+                    $(this).html("<img src='img/dduk.jpg'>");
+                } else {
+                    $('p').text("오답입니다 " + posHint);
+                }
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr id="tr0"><td></td><td></td><td></td></tr>
+        <tr id="tr1"><td></td><td></td><td></td></tr>
+        <tr id="tr2"><td></td><td></td><td></td></tr>
+    </table>
+    <p>답 뿌리는곳</p>
+</body>
+</html>

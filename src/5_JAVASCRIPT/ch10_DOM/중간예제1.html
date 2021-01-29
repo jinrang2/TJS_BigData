@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function backColorChange(pos) {
+
+            var p = document.querySelector('p');
+            p.innerHTML = pos;
+            
+            switch (pos) {
+                case 0: document.body.style.backgroundColor = 'white'; break;
+                case 1: document.body.style.backgroundColor = 'red'; break;
+                case 2: document.body.style.backgroundColor = 'oragne'; break;
+                case 3: document.body.style.backgroundColor = 'yellow'; break;
+                case 4: document.body.style.backgroundColor = 'green'; break;
+                case 5: document.body.style.backgroundColor = 'blue'; break;
+                case 6: document.body.style.backgroundColor = 'navy'; break;
+                case 7: document.body.style.backgroundColor = 'purple'; break;
+            }
+        }
+
+    </script>
+    <style>
+        *{margin:0; padding:0;}
+        
+        div{
+            width:1000px;
+            height:300px;
+        }
+
+        td {
+            width:100px;
+            height:200px;
+        }
+        td:nth-child(1) {   background-color: red;      }
+        td:nth-child(2) {   background-color: orange;   }
+        td:nth-child(3) {   background-color: yellow;   }
+        td:nth-child(4) {   background-color: green;    }
+        td:nth-child(5) {   background-color: blue;     }
+        td:nth-child(6) {   background-color: navy;     }
+        td:nth-child(7) {   background-color: purple;   }
+
+    </style>
+</head>
+<body >
+    <div >
+        <table>
+            <tr onmouseout="backColorChange(0)" >
+                <td onmouseover="backColorChange(1)" ></td>
+                <td onmouseover="backColorChange(2)" ></td>
+                <td onmouseover="backColorChange(3)" ></td>
+                <td onmouseover="backColorChange(4)" ></td>
+                <td onmouseover="backColorChange(5)" ></td>
+                <td onmouseover="backColorChange(6)" ></td>
+                <td onmouseover="backColorChange(7)" ></td>
+            </tr >
+        </table>
+    </div>
+    <p>상태 확인용</p>
+</body>
+</html>

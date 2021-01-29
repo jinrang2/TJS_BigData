@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onkeyup = function () {
+            var p = document.getElementsByTagName('p')[0];
+            //event.keyCode
+            if (event.keyCode >= 48 && event.keyCode <= 57) {
+                p.innerHTML += "입력한 수 : " + (event.keyCode - 48);
+            } else if (event.keyCode >= 96 && event.keyCode <= 105) {
+                p.innerHTML += "입력한 수 : " + (event.keyCode - 96);
+            }
+            p.innerHTML += '입력한 키의 아스키 코드는' + event.keyCode + '<br>';
+        }
+        
+    </script>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

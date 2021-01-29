@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var reset = function () {
+                $('#left').val(parseInt(Math.random() * 9));
+                $('#right').val(parseInt(Math.random() * 9));
+            };
+
+            reset();
+
+            $('#reset').click(function () {
+                reset();
+                $('#input').val('');
+            });
+
+            $('#chk').click(function () {
+                input = Number($('#input').val());
+                left = Number($('#left').val());
+                right = Number($('#right').val());
+
+                if (input == (left+right) ) {
+                    $('#p1').html('<h1>맞았습니다</h1>').css('color', 'blue');
+                } else {
+                    $('#p1').html('<h1>틀렸습니다</h1>').css('color', 'red');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        1단계<input type="text" id="left" />+
+        <input type="text" id="right" />=<input type="text" id="input" />
+    </p>
+    <p>
+        <button id="reset">다시해봐</button>
+        <button id="chk">채점해봐</button>
+    </p>
+    <p id="p1"></p>
+</body>
+</html>

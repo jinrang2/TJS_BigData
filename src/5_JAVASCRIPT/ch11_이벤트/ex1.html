@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onkeyup = function () {
+            var downKey;
+            var leftNum = true;
+
+            if (event.keyCode >= 48 && event.keyCode <= 57) {
+                downKey = event.keyCode - 48;
+                leftNum = true;
+            } else if (event.keyCode >= 96 && event.keyCode <= 105) {
+
+                downKey = event.keyCode - 96;
+                leftNum = false;
+            }
+                        
+            var p = document.getElementsByTagName('p')[0];
+            var pss = document.getElementsByTagName('p');
+            var span = document.getElementsByTagName('span')[0];
+            var spanp = document.querySelectorAll('span');
+            p.innerHTML += downKey;
+
+            var td = document.getElementsByTagName('td');
+
+            for (var i = 0; i < td.length; i++) {
+                td[i].style.backgroundColor = 'white';
+                //alert('너 안나올것 같아');
+            }
+
+            var cnt = 0;
+            cnt++;
+
+            for (var i in td) {
+                p.innerHTML += i + '<br>';
+                //td[j].style.backgroundColor = 'white';
+                //alert('너 안나올것 같아');
+            }
+
+            for (var i in pss) {
+                p.innerHTML += i + '<br>';
+            }
+
+            cnt = 0;
+            for (var i in pss2) {
+                cnt++;                
+            }
+            
+            p.innerHTML += cnt + '<br>';
+
+            if (leftNum == true)
+                td[downKey].style.backgroundColor = 'yellow';
+            else
+                td[downKey].style.backgroundColor = 'red';
+        };
+
+
+    </script>
+    <style>
+        table {
+            width: 500px;
+            margin: 50px auto;
+            background-color: darkgreen;
+        }
+
+        td {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </table>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</body>
+</html>

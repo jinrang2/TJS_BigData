@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+
+        window.onload = function () {
+            var parentIdValue = opener.document.getElementById('id').value;
+            var childId = document.getElementById('id');
+
+            childId.innerHTML = parentIdValue;
+        }
+
+
+
+        function confirm() {
+            var childIdValue = document.getElementById('id').value;
+            opener.document.getElementById('id').value = childIdValue;
+
+            close();
+        }
+
+    </script>
+</head>
+<body>
+    <p>
+        ID
+        <input type="text" id="id" />
+        <button onclick="chk()" id="chk">체크</button>
+    </p>
+    <p>
+        <button onclick="confirm()" id="useid">아이디사용</button>
+    </p>
+</body>
+</html>

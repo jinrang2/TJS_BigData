@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function openConfirm() {
+            id = document.getElementById('id');
+
+            if (id.value == '') {
+                alert("아이디를 입력해주세요");
+                id.focus();
+                return;
+            }
+            
+
+            var child = window.open('confirm.html', '', 'width=600,height=700');
+
+            if (!child) {
+                alert('팝업차단 해제해주세요');
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        아이디
+        <input type="text" id="id" />
+        <button onclick="openConfirm()" id="confirm">중복확인</button>
+    </p>
+</body>
+</html>

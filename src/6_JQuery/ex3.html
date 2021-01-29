@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('img').hover(function () {
+                $(this).each(function (idx, item) {
+                    item.attr('img', 'img/' + idx + 'over.jpg');
+                });
+            });
+            /*$('img').each(function (idx, item) {
+                $('p').append(item);
+                /*item.attr('img' + idx).hover(function () {
+                    $(this).attr('src', 'img/'+idx+'over.jpg');
+                }); 
+            });*/
+        });
+    </script>
+
+    <style>
+    
+    </style>
+</head>
+<body>
+    <img src="img/0out.jpg" id="img1" alt="0클릭전" />
+    <img src="img/1out.jpg" id="img2" alt="1클릭전" />
+    <img src="img/2out.jpg" id="img3" alt="2클릭전" />
+    <img src="img/3out.jpg" id="img4" alt="3클릭전" />
+    <p>디버그</p>
+</body>
+</html>

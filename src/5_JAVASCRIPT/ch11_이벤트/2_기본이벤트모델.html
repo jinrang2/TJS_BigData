@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var header = document.getElementById('header');
+
+            var whenClick = function () {
+                alert('Click');
+            }
+
+            var p = document.getElementsByTagName('p')[0];
+
+            p.innerHTML = "뭐야 왜 안되";
+
+            alert(p);
+
+            for (var key in header) {
+                p.innerHTML += key + ":" + header[key] + "<br>";
+            }
+
+
+        };
+
+        
+
+    </script>
+</head>
+<body>
+    <h1 id="header">Click 해 봐</h1>
+    <p>음</p>
+</body>
+</html>

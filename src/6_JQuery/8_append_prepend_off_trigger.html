@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        var rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+        var h1Cnt = 0, h2Cnt = 0;
+
+        $(document).ready(function () {
+            $('#h1').click(function () {
+                if (h1Cnt++ < 6) {
+                    $(this).prepend('♥').css('color', 'red');
+                    $(this).append('♥').css('color', 'blue');
+                } else {
+                    $('#h1').off();
+                }  
+            });
+
+            $('#h2').click(function () {
+                if (h2Cnt++ < 6) {
+                    $(this).prepend('★').css('color', 'red');
+                    $(this).append('★').css('color', 'blue');
+                }
+            });
+
+            setInterval(function () {
+                $('#h1').trigger('click');
+            }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <h1 id="h1">start1: </h1>
+    <h1 id="h2">start2: </h1>
+</body>
+</html>

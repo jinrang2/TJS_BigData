@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#msg').html('Hello jQuery');
+            //$('#msg').text('Hello jQuery');
+            $('input[name="msg"]').val('Hello, jQuery');
+            //var msg = $('#msg').html();
+            //var msg = $('#msg').text();            
+            var msg = $('input[type=text]').val();
+            alert(msg);
+
+            $('input[type="text"], input[type=password]').focus(function () {
+                $(this).css('background-color','yellow').css('color','red');
+            });
+
+            $('input[type="text"], input[type=password]').blur(function () {
+                //$(this).css('background-color', 'white').css('color', 'black');
+                $(this).cssText(
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="msg"></p>
+    <p>메세지<input type="text" name="msg"></p>
+    <p>비밀번호<input type="password" name="pw"></p>
+
+</body>
+</html>

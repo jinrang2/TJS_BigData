@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function backColorChange(pos) {
+
+            daybyweek = ['일', '월', '화', '수', '목', '금', '토'];
+            rainbow = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+
+            var p = document.querySelector('p');
+            var body = document.querySelector('body');
+
+            if (pos == 0) {
+                p.innerHTML = '';                
+            } else {
+                p.style.color = rainbow[pos];
+                p.innerHTML = '<h1>야호 ' + daybyweek[pos - 1] + '요일이다</h1>';                
+            }
+            
+            document.body.style.backgroundColor = rainbow[pos];            
+            
+        }
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;            
+            background-color:white;
+        }
+
+        div {
+            width:730px;
+            height:200px;
+        }
+
+        td {
+            width: 100px;
+            height: 200px;
+        }
+
+        p {
+            color:white;
+        }
+
+            td:nth-child(1) {
+                background-color: red;
+            }
+
+            td:nth-child(2) {
+                background-color: orange;
+            }
+
+            td:nth-child(3) {
+                background-color: yellow;
+            }
+
+            td:nth-child(4) {
+                background-color: green;
+            }
+
+            td:nth-child(5) {
+                background-color: blue;
+            }
+
+            td:nth-child(6) {
+                background-color: navy;
+            }
+
+            td:nth-child(7) {
+                background-color: purple;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr onmouseout="backColorChange(0)">
+                <td onmouseover="backColorChange(1)"></td>
+                <td onmouseover="backColorChange(2)"></td>
+                <td onmouseover="backColorChange(3)"></td>
+                <td onmouseover="backColorChange(4)"></td>
+                <td onmouseover="backColorChange(5)"></td>
+                <td onmouseover="backColorChange(6)"></td>
+                <td onmouseover="backColorChange(7)"></td>
+            </tr>
+        </table>
+    </div>
+    <p> </p>
+</body>
+</html>
