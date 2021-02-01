@@ -7,7 +7,7 @@
 * [개인프로젝트](project_group/individual/README.md)
   * [1. 제작 배경](project_group/individual/1.-rise-of-kingdoms.md)
   * [2. 기능 명세서](project_group/individual/2.-2.md)
-  * [Untitled](project_group/individual/untitled.md)
+  * [3.설계](project_group/individual/3.design.md)
   * [9. 관련 기술 및 참고 사이트](project_group/individual/2..md)
 
 ## 강좌 정리 <a id="lecture_summary_group"></a>
