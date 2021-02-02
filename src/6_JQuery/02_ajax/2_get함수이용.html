@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                var mId = $('mId').val();
+                //$get('url',콜백함수) ('idConfirm.jsp?mId='+mid,콜백함수)
+                $.get('idconfirm.html?mId=' + mId, function (data, status) {
+                    // data : 요청 페이지 결과 데이터
+                    // status : 요청상태(success, error, ...)
+                    if (status == 'success') {
+                        $('#result').html(data);
+                    } else {
+                        alert('load 실패' + statusTxt + '\n' + xhr.status + '\n' + xhr.statusTxt);
+
+                        // xhr.status : 404없는 파일
+                        // xhr.statusTxt : 에러타입
+                    }
+                });
+            });
+
+            $('#mId').keyup(function () {
+                var mId = $('mId').val();
+                //$get('url',콜백함수) ('idConfirm.jsp?mId='+mid,콜백함수)
+                $.get('idconfirm.html?mId=' + mId, function (data, status) {
+                    // data : 요청 페이지 결과 데이터
+                    // status : 요청상태(success, error, ...)
+                    if (status == 'success') {
+                        $('#result').html(data);
+                    } else {
+                        alert('load 실패' + statusTxt + '\n' + xhr.status + '\n' + xhr.statusTxt);
+
+                        // xhr.status : 404없는 파일
+                        // xhr.statusTxt : 에러타입
+                    }
+                });
+            });
+  });
+    </script>
+</head>
+<body>
+    <p>
+        아이디 <input type="text" name="mId" id="mId" />
+        <button>중복확인</button>
+    </p>
+    <span id="result"></span>
+</body>
+</html>
