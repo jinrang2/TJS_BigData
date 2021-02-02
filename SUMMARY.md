@@ -65,6 +65,8 @@
   * [Untitled](lecture_summary_group/05.javascript/untitled-3.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled-2.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled.md)
+* [06.JQuery](lecture_summary_group/06.jquery.md)
+* [07.R](lecture_summary_group/07.r.md)
 * [99.자습](lecture_summary_group/99.selfstudy/README.md)
   * [01.Java Stream](lecture_summary_group/99.selfstudy/01.java-stream.md)
   * [02.Java Regexp](lecture_summary_group/99.selfstudy/02.java-regexp.md)
