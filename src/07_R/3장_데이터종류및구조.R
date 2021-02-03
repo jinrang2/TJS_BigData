@@ -613,6 +613,39 @@ path <- 'home/hadoop/data/speech.csv'
 strsplit(path,'/')    
 customerInfo <- 'jin@gmail.com,010-9999-8888,seoul Korea'
 strsplit(customerInfo,',')    
-customersInfo <- c('jin@gmail.com,010-9999-8888,seoul Korea',
+customers <- c('jin@gmail.com,010-9999-8888,seoul Korea',
                    'yun@naver.com,02-716-1006,pusan korea',
                    'yun@naver.com,011-716-1006,pusan korea')
+
+customersInfo
+strsplit(customers,'[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}')
+
+#문자열 대체 : sub(oldStr, newStr, string)
+            # gsub(oldStr, newStr, string)
+s <- 'Curly is the smart one, Curly is funny, too.'
+sub('Curly','Eric',s)
+s
+gsub('Curly','Eric',s)
+s
+gsub(' ','',s)
+
+# 외적:outer ; 문자열의 모든 쌍별 조합 만듦
+a <- c('aa','bb','cc')
+b <- c('11','22','33')
+outer(a,b, FUN="paste")
+outer(a,b, FUN="paste", sep=' ~ ')
+
+#날짜 
+today = Sys.Date()
+class(today)
+
+# %Y: 년도 4자리 %y:년도 2자리 %m:월 %d일
+thatday = as.Date("21-04-30","%y-%m-%d")
+thatday
+
+if(today < thatday){
+  cat('today보다 thatday 후')
+}
+
+
+
