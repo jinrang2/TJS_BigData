@@ -62,7 +62,7 @@
   * [06.객체](lecture_summary_group/05.javascript/06.object.md)
   * [07.생성자함수](lecture_summary_group/05.javascript/07.constructor.md)
   * [08.기본내장객체](lecture_summary_group/05.javascript/08.native_objects.md)
-  * [Untitled](lecture_summary_group/05.javascript/untitled-3.md)
+  * [09.BOM](lecture_summary_group/05.javascript/09.bom.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled-2.md)
   * [Untitled](lecture_summary_group/05.javascript/untitled.md)
 * [06.JQuery](lecture_summary_group/06.jquery.md)
