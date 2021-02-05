@@ -256,7 +256,7 @@ setequal(a,c(intersect(a,b),setdiff(a,b)))
 
 # 7. 리스트
 student <- list(name='홍길동', age=25)
-
+student
 student$name
 
 studentVector <- unlist(student)
