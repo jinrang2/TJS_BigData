@@ -284,7 +284,7 @@ summaryBy(sal + comm ~ deptno, emps, na.rm=T, fun=c(mean, sd))
 # 오름차순 정렬
 orderBy(~Sepal.Length, data=iris)
 
-# 오름차순 정렬
+# 내림차순 정렬
 orderBy(~-Sepal.Length, data=iris)
 
 orderBy(~Species-Sepal.Length, data=iris)
@@ -431,7 +431,9 @@ names(data) <- c('1st','2nd','3rd','4th','5th')
 data
 sort(data)
 data
+
 order(data)
+
 data[order(data)]
 
 #iris 데이터를 sepal.Length를 기준으로 내림차순 정렬

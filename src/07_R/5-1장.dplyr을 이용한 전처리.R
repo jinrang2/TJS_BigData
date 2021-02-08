@@ -64,10 +64,10 @@ summary(mpg) #최소값 14분위수 중위수 3사분위수 최대값
 
 # 변수명 바꾸기 (Cty-> city, hwy-> highway)
 
-library('dplyr')
-
 install.packages('dplyr')
 
+library('dplyr')
+mpg <- as.data.frame(ggplot2::mpg)
 mpg <- rename(mpg, c(city=cty,highway=hwy))
 
 
@@ -239,14 +239,82 @@ mpg %>%
 
 #혼자1 q1
 
-mpg$displ_div <- ifelse(mpg$displ<=4,'low','')
-mpg$displ_div2 <- ifelse(mpg$displ>=5,'high','')
 
-head(mpg)
+
+
+library('dplyr')
+library('doBy')
+
+mpg <- as.data.frame(ggplot2::mpg)
+mpg <- rename(mpg, c(city=cty,highway=hwy))
+
+mpg$displ_div <- as.factor(mpg$displ_div)
+
+levels(mpg$displ_div)
+
+# 파생변수
+mpg$displ_div <- ifelse(mpg$displ<=4,'low', ifelse(mpg$displ>=5,'high','etc'))
+
+# 이렇게도 된다
+mpg$displ_div <- 'etc'
+mpg$displ_div[mpg$displ<=4] <- 'low'
+mpg$displ_div[mpg$displ>=5] <- 'high'
+
 
 mpg %>% 
-  group_by(displ_div, displ_div2) %>% 
-  summarise(mean_highway = mean(highway))
+  group_by(displ_div) %>% 
+  summarise(mean_highway = mean(highway), mean_city = mean(city))
+
+
+str(mpg)
+
+tapply(mpg$highway,mpg$displ_div,mean)
+## mean은 두열에 대해서는 mean이 안된다
+by(mpg[,9], mpg$displ_div, mean)
+## 근데 이렇게 하면 되네????
+by(mpg[,9]+mpg[,8], mpg$displ_div, mean)
+
+data <- summaryBy(highway + city ~ displ_div +  trans, mpg)
+
+data
+
+?orderBy
+
+
+#한줄일때
+orderBy(~-highway.mean, data=summaryBy(highway + city ~ displ_div +  trans, mpg))
+orderBy(~-city.mean, data=summaryBy(highway + city ~ displ_div +  trans, mpg))
+
+
+# 여러줄일때 필요한열 쓰고, 리스트면 그냥, 데이터 프레임 정렬이면 order함수 뒤에 컴마 추가
+data[order(-data$city.mean,-data$highway.mean),]
+
+?sort
+
+
+sort(-data$city.mean)
+
+
+
+order(aggregate(mpg[,c('city','highway')],by=list(mpg$displ_div), mean))
+
+
+aggregate(mpg[,c('city','highway')],by=list(mpg$displ_div), mean)
+
+
+
+data <- c(10,30,100,1,3)
+
+names(data) <- c('1st','2nd','3rd','4th','5th')
+
+tapply(mpg$highway,mpg$displ_div,mean)
+
+sort(tapply(mpg$highway,mpg$displ_div,mean))
+
+data
+order(data)
+data[order(data)]
+
 
 
 # 혼자1 Q2
@@ -256,11 +324,16 @@ mpg %>%
   summarise(mean_city = mean(city))
 
 
+
+
 # 혼자1 Q3    
 mpg %>% 
   filter(manufacturer %in% c("chevrolet", "ford", "honda")) %>% 
   group_by(manufacturer) %>%  
   summarise(mean_highway = mean(highway))
+
+
+
 
 #혼자2 Q1
 mpg %>% 
@@ -326,12 +399,214 @@ mpg %>%
   head(3)
   
 #혼자4 4
-mpg$count <- 1
-  
 mpg %>% 
   filter(class == "compact") %>% 
   group_by(manufacturer) %>% 
-  summarise(n_count = sum(count)) %>% 
+  summarise(n_count = n()) %>% 
   arrange(-n_count)
-    
 
+
+#4. 데이터 합치기
+ #열 합치기 : cbind, left_join
+ #행 합치기 : rbind, bind_rows
+ #cf. merge
+
+#4.1 열 합치기(가로 합치기)
+test1 <- data.frame(id=c(1,2,3,4,5),
+                    midterm =  c(79,80,90,95,99))
+
+test2 <- data.frame(id=c(1,2,3,4,5), 
+                    finalterm =c(90,80,70,60,99),
+                    teacherid=c(1,1,2,2,3))
+                    )
+
+teacher <- data.frame(teacherid=c(1,2,3),
+                      teachername=c('Kim','Park','Ryu'))
+
+
+cbind(test1, test2)
+merge(test1, test2)
+left_join(test1, test2, by='id')
+#cbind(test2, teacher)
+left_join(test2, teacher, by='teacherid')
+merge(test2, teacher, by='teacherid')
+
+
+
+test2 <- data.frame(id=c(1,2,3,4,5), 
+                    finalterm =c(90,80,70,60,99),
+                    teacherid=c(1,1,2,2,4))
+)
+
+teacher <- data.frame(teacherid=c(1,2,3),
+                      teachername=c('Kim','Park','Ryu'))
+
+
+left_join(test2, teacher, by='teacherid')
+
+merge(test2, teacher, by='teacherid')
+
+
+#4.2 행 합치기(세로 합치기)
+group_a <- data.frame(id=c(1,2,3,4,5),
+                      test=c(60,70,80,90,95))
+
+group_b <- data.frame(id=c(6,7,8,9,10),
+                      test=c(90,95,94,93,92))
+
+
+rbind(group_a, group_b)
+bind_rows(group_a, group_b)
+
+
+group_a <- data.frame(id=c(1,2,3,4,5),
+                      test1=c(60,70,80,90,95))
+
+group_b <- data.frame(id=c(6,7,8,9,10),
+                      test2=c(90,95,94,93,92))
+
+
+# 두 데이터의 프레임의 변수가 일부 같지 않은 경우
+rbind(group_a, group_b)
+
+bind_rows(group_a, group_b)
+
+df <- dafa.frame(name=c('kim','Yi','yun','Ma','Mark'),
+                 gender=c('M','F','NA,'M','f'),
+                 score=c(5,4,3,4,NA),
+                 income=c(2000,c(3000,4000,5000))
+                 
+                 
+na.omit(df)
+                          '))
+tapply(df$score, df$gender, mean, na.rm=T)
+
+x <- c(1,1,2,2,3,3,3,4,4,5,5,100)
+
+mean(x)
+median(x)
+
+exam <- read.csv("inData/exam.csv",header=T)
+
+
+
+table(is.na(exam))
+colnames(exam)
+exam[c(3,8,15),'math'] <- NA
+exam[1:2,'english'] <- NA
+
+table(is.na(exam))
+apply(exam[3:5],2,mean, na.rm=T)
+
+
+tapply(exam[,3],exam$class, mean)
+
+#결측치들을 중앙값 대체
+exam
+
+
+exam %>% 
+  summarise(math=mean(math,na.rm=T),
+            english=mean(english,na.rm=T),
+            science=mean(science,na.rm=T),
+            )
+
+exam$math
+
+exam$math <- ifelse(is.na(exam$math), median(exam$math,na.rm=T), exam$math)
+
+exam$math <- ifelse(is.na(exam$math), round(mean(exam$math,na.rm=T)), exam$math)
+
+exam$math[3] <- ifelse(is.na(exam$math[3]), median(exam$math[3],ma.rm=T), exam$math[3])
+
+
+
+
+
+exam$english
+
+exam$english <- ifelse(is.na(exam$english), median(exam$english, na.rm=T), exam$english)
+
+
+exam$english
+
+
+table(is.na(exam))
+colSums(is.na(exam))
+
+
+
+
+#결측치 대체 방법1
+exam <- within(exam,{
+math <-    ifelse(is.na(math)   , median['math']   ,math)
+english <- ifelse(is.na(english), median['english'],english)
+science <- ifelse(is.na(science), median['science'],science )
+})
+
+
+median['math'];
+median['english'];
+
+
+exam %>% 
+  mutate(
+    math <-    ifelse(is.na(math)   , median['math']   ,math,
+    english <- ifelse(is.na(english), median['english'],english,
+    science <- ifelse(is.na(science), median['science'],science 
+)
+
+
+
+
+
+
+
+#5.2 이상치 정제
+# 극단적인 이상치
+
+outlier <- data.frame(gender=c(1,2,1,3,2),score=c(90,95,100,99,101))
+
+table(outlier$gender)
+
+outlier$gender <- ifelse(outlier$gender==3, NA, outlier$gender)
+
+
+
+
+
+mpg <- as.data.frame(ggplot2::mpg)
+
+mpg$hwy
+
+mean(mpg$hwy)+3*sd(mpg$hwy)
+mean(mpg$hwy)-3*sd(mpg$hwy)
+
+result <- boxplot(mpg$hwy)$stats
+
+result[1]; result[5]
+
+ifelse(mpg$hwy >  mean(mpg$hwy)+3*sd(mpg$hwy),mpg$hwy,'정상')
+
+subset(mpg, mpg$hwy==44)
+
+mpg$hwy <- ifelse(mpg$hwy>result[5] | mpg$hwy<result[1], NA, mpg$hwy)
+
+boxplot(mpg$hwy)
+
+table(is.na(mpg$hwy))
+
+mpg
+
+
+fuel <- data.frame(fl=c('c','d','e','p','r'),
+                   price=c(2.35,2.38,2.11,2.76,2.22)
+)
+
+fuel
+
+mpg2 <- left_join(mpg,fuel,by='fl')
+
+#6.  혼자해보기
+
+table(mpg$drv)
