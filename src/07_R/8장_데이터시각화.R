@@ -84,3 +84,286 @@ mtext("blue line(y2)", side=2, line=3, at=-1, col=2)
 
 par(oldpar) #그래프 영역 설정 원상 복구
 
+install.packages(ggplot2)
+
+library(ggplot2)
+
+ggplot(data=iris, aes(x=Petal.Length, y=Petal.Width)) + geom_point(aes(color=Species)) +
+scale_color_manual(values = c('black','red','orange')) +
+labs(title="iris 데이터의 산점도",x="꽃잎 길이",y="꽃잎 너비") +
+coord_cartesian(ylim=c(0,2.5)) +
+geom_smooth()
+
+
+mtcars$cyl <- factor(mtcars$cyl, levels= c(4,6,8), labels=c('4 cylinders','6 cylinders','8 cylinders'))
+
+str(mtcars$cyl)
+
+
+ggplot(data=mtcars, aes(x=mpg)) + geom_histogram() +
+  facet_grid(cyl~.) +
+  labs(title='cyl에 따른 연비 히스토그램', x='연비', y='횟수')
+
+
+# ggplot2::mpg 데이터 셋에서 displ의 도수푼포표
+
+str(mpg$displ)
+
+library(ggplot2)
+
+# 배기량에 따른
+ggplot(data=mpg, aes(x=displ)) +
+geom_histogram(aes(fill=class)) +
+theme(axis.text.x = element_text(color='red', size=15),
+      axis.line = element_line(color='black', size=2),
+      axis.text.y = element_blank(),
+      panel.background = element_rect(fill='lightblue')
+      )
+
+
+ggplot(mpg, aes(x=displ)) +
+  geom_histogram(aes(fill=class) , binwidth = 0.1) +
+labs(title='Histogram with Auto Binding', subtitle = "(Engine Displacemetn acrooss Wechicle Classes)")+
+  theme(legend.position = 'bottom')
+
+
+ggplot(mpg, aes(x=displ)) +
+  geom_histogram(aes(fill=class) , bins = 5, col='gray') 
+
+# 4.3
+
+boxplot(iris$Sepal.Length)$stat
+
+ggplot(iris, aes(y=Sepal.Length)) +
+geom_boxplot()
+
+#종별 Sepal.Length의 차이가 있는지를 보고 싶을때
+tapply(iris$Sepal.Length, iris$Species, mean)
+
+
+ggplot(iris, aes(y=Sepal.Length, x=Species)) + geom_boxplot(aes(fill=Species), col="dimgray") +
+  scale_fill_manual(values=c('#ff0000','yellow','green'))
+
+
+library(RColorBrewer)
+display.brewer.all()
+
+pal <- brewer.pal(8, 'Set2')
+
+
+ggplot(iris, aes(y=Sepal.Length, x=Species)) +
+  geom_boxplot(aes(fill=Species), col='dimgray') +
+  scale_fill_manual(values=pal)
+
+
+install.packages("gapminder")
+library(gapminder)
+
+table(gapminder$country)
+dim(gapminder)
+
+head(gapminder)
+
+subset(gapminder, gapminder$country=='Afghanistan')
+
+tapply(gapminder$pop, gapminder$continent, sum)
+
+
+ggplot(gapminder, aes(x=continent, y=gdpPercap)) +
+  geom_boxplot() +
+  coord_cartesian(ylim=c(0,30000))
+
+install.packages("car")
+library(car)
+
+#교수의 직급별(조교수, 부교수, 정교수) 연봉이 상이한지
+# notch=T : 중위수에 대해서 95% 신뢰구간 표현, 신뢰구간이 겹치는지 파악
+# position = 'jitter' : 산점도를 분산해서
+# geom_rug : 관측값의 밀도 상태 표현
+# 데이터가 많은곳은 빽뺵하게, 데이터가 적은 곳은 하얗게게
+ggplot(Salaries, aes(x=rank, y=salary)) + geom_boxplot(aes(col=rank), fill='lightyellow', notch=T) +
+geom_point(position = 'jitter', col='brown', alpha=0.2, pch=6) +
+  geom_rug(col='dimgray', sides="l")
+
+
+# mtcars 데이터 cyl개수에 따른 연비 mpg의 95% 중우쉬 신뢰구간을 표현 상자도표를 시각회하시오
+head(mtcars)
+?mtcars
+str(mtcars$cyl)
+
+
+ggplot(mtcars, aes(x=cyl, y=mpg)) +
+  geom_boxplot(norch=T)
+
+# 4.4 바이올린 도표 ; boxplot과 밀도도표를 합쳐
+# 합창부 단원의 키와 성악부 part의 관계계
+
+library(lattice)
+
+
+ggplot(singer, aes(x=voice.part, y=height)) +
+  geom_point(position = 'jitter', col='brown', alpha=0.2, pch=6) +
+  geom_boxplot(notch=T)
+
+ggplot(singer, aes(x=voice.part, y=height)) +
+  geom_violin(fill='honeydew2') +
+  geom_boxplot(fill='green', width=0.3) 
+
+# 4.5 밀도도표
+head(mtchars,1)
+
+
+ggplot(data=mtcars, aes(x=mpg, fill=cyl)) + geom_density() +
+labs(title='밀도도표', x="Miles per Gallon") +
+  theme(legend.position = c(0.6,0.8))
+
+
+# 4.6 추세선 (시계열에서 데이터의 흐름 표현)
+economics
+colnames(economics)
+
+#시간(date)에 따른 실업률(unemploy)
+ggplot(data=economics, aes(x=date, y=unemploy)) +
+  geom_line() + #추세선
+  geom_smooth(method='lm') # 적합도선
+
+# 4.7 막대도표 (geom_bar함수, geom_col함수)
+# 도수분포표: 막대 도표, 히스토 그램 모두
+# 히스토 그램: 연속형 자료를 계급으로 나누어 계급별 도수를 나타냄
+# geom_histogram()함수
+
+# 막대도표 : 범주형 자료의 빈도를 나타냄
+#geom_bar(), geom_col() 함수
+
+#mpg 데이터 셋에서 제조회사 별로 빈도표
+str(mpg$manufacturer)
+
+str(mpg)
+
+ggplot(mpg, aes(x=manufacturer)) +
+geom_bar(stat='count')
+
+ggplot(mpg, aes(x=manufacturer, fill=class)) +
+  geom_bar(stat='count') +
+  theme(legend.position = 'top',
+        axis.text.x = element_text(angle=60, vjust=0.5)) +
+  scale_fill_manual(values=topo.colors(7))
+labs(title='제조사 별 class 빈도표')
+
+
+
+ggplot(mpg, aes(x=manufacturer, fill=model)) +
+  geom_bar(stat='count') +
+  theme(legend.position = 'top',
+        axis.text.x = element_text(angle=60, vjust=0.5)) 
+
+# 다이아 몬드 품질별 데이터
+head(diamonds)
+str(diamonds)
+dim(diamonds)
+# 다이아몬드 품질(cut)별 빈도수 시각화
+ggplot(diamonds, aes(x=cut, fill=cut, full=cut)) + geom_bar(stat='count') +
+  scale_fill_manual(values=topo.colors(5)) + 
+  scale_color_manual(values=rainbow(5))
+
+table(diamonds$cut, diamonds$color)
+
+library(dplyr)
+
+diamonds %>% 
+  group_by (cut, color) %>% 
+  summarise(n=n() ) %>% 
+  ggplot(aes(x=cut, fill=color,y=n )) +
+  geom_bar(stat='identity', position='dodge')
+
+?geom_bar
+
+
+diamonds %>% 
+  group_by (cut, color) %>% 
+  summarise(n=n() ) %>% 
+  ggplot(aes(x=cut, fill=color,y=n )) +
+  geom_bar(stat='identity')
+
+#다이아몬드도 품질(cut)별 table의 종류와 갯수
+diamonds %>% 
+  group_by (cut, table) %>% 
+  summarise(n=n() ) %>% 
+  ggplot(aes(x=cut, fill=table, y=n )) +
+  geom_col(stat='dodge')
+
+
+
+diamonds %>% 
+  group_by (cut, table) %>% 
+  summarise(n=n() ) %>% 
+  ggplot(aes(x=table, y=n )) +
+  geom_bar(stat='identity') +
+  facet_wrap(~cut) +
+  coord_cartesian(ylim=c(0,3000), xlim=c(50,80))
+
+
+diamonds %>% 
+  group_by (cut, table) %>% 
+  summarise(n=n()) %>% 
+  group_by (cut) %>% 
+  summarise(n=n())
+
+
+diamonds %>% 
+  group_by (cut) %>% 
+  summarise(n=n_distinct(table)) 
+
+
+diamonds %>% 
+  group_by (cut) %>% 
+  summarise(n=n()) 
+
+# 4.8 그래프를 파일에 저장
+jpeg('iris2.jpg')
+
+boxplot(iris$Sepal.Length)
+dev.off()
+
+png('iris.png', width=300, height=150)
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width)) +
+  geom_point() +
+  facet_wrap(~Species)
+
+
+dev.off()
+
+
+ggplot(iris, aes(x=Petal.Width, y=Petal.Length, col=Species)) +
+  geom_point(aes(size=Petal.Width),pch=2, alpha=0.5) +
+ggsave('outData/iris.jpg')
+
+
+# 4.9 차트 분할 출력
+install.packages("gridExtra")
+library(gridExtra)
+
+
+g1 <- ggplot(iris, aes(x=Petal.Width, y=Petal.Length)) + geom_point()
+
+g1
+
+g2 <- ggplot(iris, aes(x=Sepal.Width, y=Sepal.Length)) + geom_point()
+
+g2
+
+
+grid.arrange(g1, g2, ncol=2)
+
+
+plot(iris[-5])
+
+pairs(iris[-5], panel=panel.smooth)
+
+
+
+qplot(data=mpg, x=drv, fill=drv)
+
+# 연습문제 1
+
