@@ -1,6 +1,10 @@
 # datasets::cars데이터 셋을 이용하여 속도에 대한 제동거리의 산점도와 적합도(신뢰구간
 # 그래프)를 나타내시오(단, 속도가 5부터 20까지 제동거리 0부터 100까지만 그래프에 나타
 
+library('ggplot2')
+library(gapminder)
+library(dplyr)
+
 cars
 
 ggplot(cars, aes(x=speed, y= dist)) +
@@ -104,4 +108,25 @@ ggplot(economics, aes(x=date, y=psavert)) +
   geom_line(color='red', size=2) +
   geom_smooth(color='brown') +
   labs(title='개인저축률 시계열 그래프', x="date")
+
+
+temp <- as.data.frame(economics)
+
+
+ggplot(economics, aes(x=date) ) +
+  geom_line(aes(y=psavert), color='red', size=2) +
+  geom_line(aes(y=uempmed), color='blue', size=2) +
+  geom_smooth(aes(y=psavert),color='brown') +
+  labs(title='개인저축률 시계열 그래프', x="date")
+
+
+ggplot(economics, aes(x=date) ) +
+  geom_line(aes(y=psavert), color='red', size=2) +
+  geom_line(aes(y=unemploy*0.001), color='blue', size=2) +
+  geom_smooth(aes(y=psavert),color='yellow') +
+  geom_smooth(aes(y=unemploy*0.001), color='green', size=2) +
+  scale_y_continuous(sec.axis = sec_axis(~.*1000,name='unemploy'))
+  labs(title='개인저축률 시계열 그래프', x="date")
+
+
 
