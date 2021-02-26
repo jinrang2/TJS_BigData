@@ -82,7 +82,7 @@
   * [ch02\_자료형과연산자](lecture_summary_group/08.python/ch02_datatype_operator.md)
   * [ch03\_데이터구조](lecture_summary_group/08.python/ch03_datastructure.md)
   * [ch04\_제어문](lecture_summary_group/08.python/ch04_condition.md)
-  * [Untitled](lecture_summary_group/08.python/untitled-14.md)
+  * [ch05\_함수](lecture_summary_group/08.python/ch05_function.md)
   * [Untitled](lecture_summary_group/08.python/untitled-13.md)
   * [Untitled](lecture_summary_group/08.python/untitled-12.md)
   * [Untitled](lecture_summary_group/08.python/untitled-11.md)
