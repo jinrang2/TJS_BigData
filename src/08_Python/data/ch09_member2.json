@@ -1,0 +1,14 @@
+[
+	{
+		"name": "홍길동",
+		"age": 20,
+		"email": "hong@name.com",
+		"address": "서울"
+	},
+	{
+		"name": "김말동",
+		"age": 30,
+		"email": "kim@name.com",
+		"address": "천안"
+	}
+]
